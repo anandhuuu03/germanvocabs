@@ -56,19 +56,16 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
     const deltaX = e.changedTouches[0].clientX - touchStartX.current;
     const deltaY = e.changedTouches[0].clientY - touchStartY.current;
 
-    // Only trigger swipe if horizontal movement is dominant
+    // Only trigger swipe if horizontal movement is dominant AND exceeds threshold
     if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > SWIPE_THRESHOLD) {
+      e.preventDefault(); // prevent click from firing after swipe
       if (deltaX < 0) {
-        // Swiped left → Next word
         onSwipeLeft && onSwipeLeft();
       } else {
-        // Swiped right → Previous word
         onSwipeRight && onSwipeRight();
       }
-    } else if (Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10) {
-      // It was a tap, not a swipe → flip
-      setIsFlipped(!isFlipped);
     }
+    // If it wasn't a swipe, do nothing — let the natural onClick fire for flip
 
     touchStartX.current = null;
     touchStartY.current = null;
