@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-const Flashcard = ({ word, article, translation, plural, beispiel }) => {
+const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, onSwipeRight, darkMode }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(false);
+
+  // Swipe tracking
+  const touchStartX = useRef(null);
+  const touchStartY = useRef(null);
+  const SWIPE_THRESHOLD = 50; // px
 
   useEffect(() => {
     setIsFlipped(false);
@@ -32,69 +37,130 @@ const Flashcard = ({ word, article, translation, plural, beispiel }) => {
     }
   }, [translation, article, word]);
 
-  // Function to play German audio
   const playAudio = (e) => {
-    e.stopPropagation(); // Prevents the card from flipping when clicking the button
+    e.stopPropagation();
     const utterance = new SpeechSynthesisUtterance(word);
-    utterance.lang = 'de-DE'; // Set language to German
+    utterance.lang = 'de-DE';
     window.speechSynthesis.speak(utterance);
   };
 
-  const genderColors = {
-    der: 'border-blue-500 text-blue-700',
-    die: 'border-red-500 text-red-700',
-    das: 'border-green-500 text-green-700'
+  // Touch handlers for swipe
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
   };
 
-  const cardStyle = genderColors[article?.toLowerCase()] || 'border-gray-300 text-gray-700';
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    const deltaY = e.changedTouches[0].clientY - touchStartY.current;
+
+    // Only trigger swipe if horizontal movement is dominant
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > SWIPE_THRESHOLD) {
+      if (deltaX < 0) {
+        // Swiped left → Next word
+        onSwipeLeft && onSwipeLeft();
+      } else {
+        // Swiped right → Previous word
+        onSwipeRight && onSwipeRight();
+      }
+    } else if (Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10) {
+      // It was a tap, not a swipe → flip
+      setIsFlipped(!isFlipped);
+    }
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
+  const genderColors = {
+    der: 'border-blue-500',
+    die: 'border-red-500',
+    das: 'border-green-500',
+  };
+  const genderText = {
+    der: 'text-blue-600',
+    die: 'text-red-600',
+    das: 'text-green-600',
+  };
+
+  const borderStyle = genderColors[article?.toLowerCase()] || 'border-gray-300';
+  const articleTextStyle = genderText[article?.toLowerCase()] || 'text-gray-500';
+
+  // Dark mode card styles
+  const frontBg = darkMode ? 'bg-gray-800' : 'bg-white';
+  const frontText = darkMode ? 'text-gray-100' : 'text-gray-900';
+  const frontHint = darkMode ? 'text-gray-500' : 'text-gray-400';
+  const audioBtn = darkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-50 hover:bg-gray-200';
+
+  const backBg = darkMode ? 'bg-gray-800 border-gray-600' : 'bg-gray-50 border-gray-200';
+  const backText = darkMode ? 'text-gray-100' : 'text-gray-800';
+  const backSub = darkMode ? 'text-gray-400' : 'text-gray-400';
+  const beispielBox = darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-100';
+  const beispielText = darkMode ? 'text-gray-300' : 'text-gray-600';
 
   return (
-    <div className="flex flex-col items-center justify-center p-4">
+    <div className="flex flex-col items-center justify-center p-4 w-full">
+      {/* Swipe hint on mobile */}
+      <p className={`text-xs mb-2 ${darkMode ? 'text-gray-500' : 'text-gray-400'} md:hidden`}>
+        ← Swipe to navigate · Tap to flip →
+      </p>
+
       <motion.div
-        className="w-72 h-[70vh] max-h-96 cursor-pointer perspective-1000 relative"
+        className={`w-72 h-[70vh] max-h-96 cursor-pointer relative select-none`}
         onClick={() => setIsFlipped(!isFlipped)}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6, type: 'spring', stiffness: 260, damping: 20 }}
-        style={{ transformStyle: 'preserve-3d' }}
+        style={{ transformStyle: 'preserve-3d', perspective: '1000px' }}
       >
         {/* Front Side */}
-        <div className={`absolute inset-0 backface-hidden border-4 rounded-3xl bg-white flex flex-col items-center justify-center shadow-xl ${cardStyle}`}>
-          
-          {/* Audio Button */}
-          <button 
-            onClick={playAudio} 
-            className="absolute top-4 right-4 text-2xl bg-gray-50 rounded-full p-2 hover:bg-gray-200 transition-colors shadow-sm"
+        <div
+          className={`absolute inset-0 backface-hidden border-4 rounded-3xl flex flex-col items-center justify-center shadow-xl ${borderStyle} ${frontBg} transition-colors duration-300`}
+          style={{ backfaceVisibility: 'hidden' }}
+        >
+          <button
+            onClick={playAudio}
+            className={`absolute top-4 right-4 text-2xl rounded-full p-2 transition-colors shadow-sm ${audioBtn}`}
             title="Play Audio"
           >
             🔊
           </button>
 
-          {article && <span className="text-lg uppercase font-bold tracking-widest mb-2">{article}</span>}
-          <h2 className="text-4xl font-extrabold text-center px-4">{word}</h2>
-          <p className="absolute bottom-6 text-gray-400 text-sm italic">Tap to flip</p>
+          {article && (
+            <span className={`text-lg uppercase font-bold tracking-widest mb-2 ${articleTextStyle}`}>
+              {article}
+            </span>
+          )}
+          <h2 className={`text-4xl font-extrabold text-center px-4 ${frontText}`}>{word}</h2>
+          <p className={`absolute bottom-6 text-sm italic ${frontHint}`}>Tap to flip</p>
         </div>
 
         {/* Back Side */}
-        <div 
-          className="absolute inset-0 backface-hidden border-4 border-gray-200 rounded-3xl bg-gray-50 flex flex-col items-center justify-center shadow-xl p-6 text-center"
-          style={{ transform: 'rotateY(180deg)' }}
+        <div
+          className={`absolute inset-0 backface-hidden border-4 rounded-3xl flex flex-col items-center justify-center shadow-xl p-6 text-center ${backBg} transition-colors duration-300`}
+          style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden' }}
         >
-          {loading && <div className="w-24 h-24 bg-gray-200 rounded-xl mb-4 animate-pulse"></div>}
-          {!loading && imageUrl && <img src={imageUrl} alt={translation} className="w-24 h-24 object-cover mb-4 rounded-xl shadow-md" />}
-          
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">{translation}</h2>
-          
+          {loading && <div className="w-24 h-24 bg-gray-300 rounded-xl mb-4 animate-pulse"></div>}
+          {!loading && imageUrl && (
+            <img src={imageUrl} alt={translation} className="w-24 h-24 object-cover mb-4 rounded-xl shadow-md" />
+          )}
+
+          <h2 className={`text-3xl font-bold mb-4 ${backText}`}>{translation}</h2>
+
           {plural && (
             <div className="mb-4">
-              <span className="text-xs text-gray-400 uppercase font-bold tracking-wider block">Plural</span>
-              <p className="text-lg font-medium text-gray-700">{plural}</p>
+              <span className={`text-xs uppercase font-bold tracking-wider block ${backSub}`}>Plural</span>
+              <p className={`text-lg font-medium ${backText}`}>{plural}</p>
             </div>
           )}
-          
+
           {beispiel && (
-            <div className="mt-2 bg-white p-4 rounded-xl border border-gray-100 shadow-sm w-full">
-              <span className="text-xs text-gray-400 uppercase font-bold tracking-wider block mb-1">Beispiel</span>
-              <p className="text-sm text-gray-600 italic">"{beispiel}"</p>
+            <div className={`mt-2 p-4 rounded-xl border shadow-sm w-full ${beispielBox}`}>
+              <span className={`text-xs uppercase font-bold tracking-wider block mb-1 ${backSub}`}>Beispiel</span>
+              <p className={`text-sm italic ${beispielText}`}>"{beispiel}"</p>
             </div>
           )}
         </div>
