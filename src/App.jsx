@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <Routes>
+        {/* Change this path from "/germanvocabs" to "/" */}
         <Route path="/" element={<MainPage />} />
       </Routes>
     </div>
