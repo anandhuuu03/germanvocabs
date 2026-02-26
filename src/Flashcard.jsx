@@ -6,10 +6,10 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
   const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // Swipe tracking
   const touchStartX = useRef(null);
   const touchStartY = useRef(null);
-  const SWIPE_THRESHOLD = 50; // px
+  const isTouchDevice = useRef(false);
+  const SWIPE_THRESHOLD = 50;
 
   useEffect(() => {
     setIsFlipped(false);
@@ -44,8 +44,8 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
     window.speechSynthesis.speak(utterance);
   };
 
-  // Touch handlers for swipe
   const handleTouchStart = (e) => {
+    isTouchDevice.current = true;
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
   };
@@ -56,19 +56,27 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
     const deltaX = e.changedTouches[0].clientX - touchStartX.current;
     const deltaY = e.changedTouches[0].clientY - touchStartY.current;
 
-    // Only trigger swipe if horizontal movement is dominant AND exceeds threshold
     if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > SWIPE_THRESHOLD) {
-      e.preventDefault(); // prevent click from firing after swipe
+      // Swipe → navigate
       if (deltaX < 0) {
         onSwipeLeft && onSwipeLeft();
       } else {
         onSwipeRight && onSwipeRight();
       }
+    } else {
+      // Tap → flip
+      setIsFlipped(prev => !prev);
     }
-    // If it wasn't a swipe, do nothing — let the natural onClick fire for flip
 
     touchStartX.current = null;
     touchStartY.current = null;
+  };
+
+  // Only fires on desktop mouse clicks, not touch
+  const handleClick = () => {
+    if (!isTouchDevice.current) {
+      setIsFlipped(prev => !prev);
+    }
   };
 
   const genderColors = {
@@ -85,7 +93,6 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
   const borderStyle = genderColors[article?.toLowerCase()] || 'border-gray-300';
   const articleTextStyle = genderText[article?.toLowerCase()] || 'text-gray-500';
 
-  // Dark mode card styles
   const frontBg = darkMode ? 'bg-gray-800' : 'bg-white';
   const frontText = darkMode ? 'text-gray-100' : 'text-gray-900';
   const frontHint = darkMode ? 'text-gray-500' : 'text-gray-400';
@@ -99,14 +106,13 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
 
   return (
     <div className="flex flex-col items-center justify-center p-4 w-full">
-      {/* Swipe hint on mobile */}
       <p className={`text-xs mb-2 ${darkMode ? 'text-gray-500' : 'text-gray-400'} md:hidden`}>
         ← Swipe to navigate · Tap to flip →
       </p>
 
       <motion.div
-        className={`w-72 h-[70vh] max-h-96 cursor-pointer relative select-none`}
-        onClick={() => setIsFlipped(!isFlipped)}
+        className="w-72 h-[70vh] max-h-96 cursor-pointer relative select-none"
+        onClick={handleClick}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         animate={{ rotateY: isFlipped ? 180 : 0 }}
@@ -115,7 +121,7 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
       >
         {/* Front Side */}
         <div
-          className={`absolute inset-0 backface-hidden border-4 rounded-3xl flex flex-col items-center justify-center shadow-xl ${borderStyle} ${frontBg} transition-colors duration-300`}
+          className={`absolute inset-0 border-4 rounded-3xl flex flex-col items-center justify-center shadow-xl ${borderStyle} ${frontBg} transition-colors duration-300`}
           style={{ backfaceVisibility: 'hidden' }}
         >
           <button
@@ -137,7 +143,7 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
 
         {/* Back Side */}
         <div
-          className={`absolute inset-0 backface-hidden border-4 rounded-3xl flex flex-col items-center justify-center shadow-xl p-6 text-center ${backBg} transition-colors duration-300`}
+          className={`absolute inset-0 border-4 rounded-3xl flex flex-col items-center justify-center shadow-xl p-6 text-center ${backBg} transition-colors duration-300`}
           style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden' }}
         >
           {loading && <div className="w-24 h-24 bg-gray-300 rounded-xl mb-4 animate-pulse"></div>}
