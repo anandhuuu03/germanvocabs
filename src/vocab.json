@@ -1,0 +1,4682 @@
+[
+  {
+    "lektion": 1,
+    "artikel": "der",
+    "deutsch": "Abend",
+    "plural": "Abende",
+    "englisch": "evening",
+    "beispiel": "Guten Abend!"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "alles",
+    "plural": "",
+    "englisch": "everything",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "antworten (Sie antworten)",
+    "plural": "",
+    "englisch": "answer (you answer)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "auch",
+    "plural": "",
+    "englisch": "also/too",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "auf",
+    "plural": "",
+    "englisch": "on",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "aus",
+    "plural": "",
+    "englisch": "from",
+    "beispiel": "Ich komme aus Syrien."
+  },
+  {
+    "lektion": 1,
+    "artikel": "die",
+    "deutsch": "Aussage",
+    "plural": "Aussagen",
+    "englisch": "statement",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "bisschen",
+    "plural": "",
+    "englisch": "a little/a bit",
+    "beispiel": "Er spricht ein bisschen Englisch."
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "bitte",
+    "plural": "",
+    "englisch": "please/thank you",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "danke",
+    "plural": "",
+    "englisch": "thank you",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "dann",
+    "plural": "",
+    "englisch": "then",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "das",
+    "plural": "",
+    "englisch": "the (neuter noun)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "der",
+    "plural": "",
+    "englisch": "the (masculine noun)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "der",
+    "deutsch": "Dialog",
+    "plural": "Dialoge",
+    "englisch": "Dialogue",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "die",
+    "plural": "",
+    "englisch": "the (feminine noun)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "dir",
+    "plural": "",
+    "englisch": "(to) you",
+    "beispiel": "Wie geht es dir?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "du",
+    "plural": "",
+    "englisch": "you",
+    "beispiel": "Bist du aus Polen?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "ein, eine",
+    "plural": "",
+    "englisch": "a/one",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "die",
+    "deutsch": "Entschuldigung",
+    "plural": "",
+    "englisch": "apology",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "er",
+    "plural": "",
+    "englisch": "he",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "es",
+    "plural": "",
+    "englisch": "it",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "die",
+    "deutsch": "Form",
+    "plural": "Formen",
+    "englisch": "form/type",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "die",
+    "deutsch": "Frage",
+    "plural": "Fragen",
+    "englisch": "question",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "fragen (Sie fragen)",
+    "plural": "",
+    "englisch": "ask (you ask)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "die",
+    "deutsch": "Frau",
+    "plural": "Frauen",
+    "englisch": "woman/mrs",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "ganz",
+    "plural": "",
+    "englisch": "quite",
+    "beispiel": "Es geht mir ganz gut."
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "gehen (es geht)",
+    "plural": "",
+    "englisch": "to do (ok/not ok)(it's going ok)",
+    "beispiel": "Es geht mir gut."
+  },
+  {
+    "lektion": 1,
+    "artikel": "die",
+    "deutsch": "Grammatik",
+    "plural": "",
+    "englisch": "grammar",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "gut",
+    "plural": "",
+    "englisch": "good",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "hallo",
+    "plural": "",
+    "englisch": "hello",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "heißen (ich heiße – du heißt – er heißt)",
+    "plural": "",
+    "englisch": "to be called (my name is – your name is – his name is)",
+    "beispiel": "Ich heiße Anna."
+  },
+  {
+    "lektion": 1,
+    "artikel": "der",
+    "deutsch": "Herr",
+    "plural": "Herren",
+    "englisch": "man/mr",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "hören (Sie hören)",
+    "plural": "",
+    "englisch": "hear (you hear)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "ich",
+    "plural": "",
+    "englisch": "I/me",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "Ihnen",
+    "plural": "",
+    "englisch": "(to) you (formal)",
+    "beispiel": "Wie geht es Ihnen?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "ihr",
+    "plural": "",
+    "englisch": "her/their",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "im",
+    "plural": "",
+    "englisch": "in",
+    "beispiel": "Fragen Sie im Kurs."
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "ja",
+    "plural": "",
+    "englisch": "yes",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "klar",
+    "plural": "",
+    "englisch": "of course",
+    "beispiel": "Ja, klar."
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "kommen (ich komme – du kommst – er kommt)",
+    "plural": "",
+    "englisch": "to come from (I come from – you come from – he comes from)",
+    "beispiel": "Woher kommst du?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "der",
+    "deutsch": "Kurs",
+    "plural": "Kurse",
+    "englisch": "course",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "der",
+    "deutsch": "Kursteilnehmer",
+    "plural": "Kursteilnehmer",
+    "englisch": "course participant (male)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "die",
+    "deutsch": "Kursteilnehmerin",
+    "plural": "Kursteilnehmerinnen",
+    "englisch": "course participant (female)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "das",
+    "deutsch": "Land",
+    "plural": "Länder",
+    "englisch": "country",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "lesen (Sie lesen)",
+    "plural": "",
+    "englisch": "read (you read)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "der",
+    "deutsch": "Mann",
+    "plural": "Männer",
+    "englisch": "man",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "mein, meine",
+    "plural": "",
+    "englisch": "my, mine",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "mit",
+    "plural": "",
+    "englisch": "with",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "morgen",
+    "plural": "",
+    "englisch": "tomorrow",
+    "beispiel": "Bis morgen!"
+  },
+  {
+    "lektion": 1,
+    "artikel": "die",
+    "deutsch": "Nacht",
+    "plural": "Nächte",
+    "englisch": "night",
+    "beispiel": "Gute Nacht!"
+  },
+  {
+    "lektion": 1,
+    "artikel": "der",
+    "deutsch": "Name",
+    "plural": "Namen",
+    "englisch": "name",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "nein",
+    "plural": "",
+    "englisch": "no",
+    "beispiel": "Nein, danke."
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "neu",
+    "plural": "",
+    "englisch": "new",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "nicht",
+    "plural": "",
+    "englisch": "not",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "oder",
+    "plural": "",
+    "englisch": "or",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "die",
+    "deutsch": "Person",
+    "plural": "Personen",
+    "englisch": "person",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "richtig",
+    "plural": "",
+    "englisch": "correct",
+    "beispiel": "Das ist richtig!"
+  },
+  {
+    "lektion": 1,
+    "artikel": "der",
+    "deutsch": "Satz",
+    "plural": "Sätze",
+    "englisch": "sentence",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "schreiben (Sie schreiben)",
+    "plural": "",
+    "englisch": "write (you write)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "sehr",
+    "plural": "",
+    "englisch": "very",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "sein (ich bin – du bist – er ist – sie/Sie sind)",
+    "plural": "",
+    "englisch": "(I am – you are – he is – they/you are)",
+    "beispiel": "Seid ihr aus Afghanistan?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "sie",
+    "plural": "",
+    "englisch": "they",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "Sie",
+    "plural": "",
+    "englisch": "you",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "so",
+    "plural": "",
+    "englisch": "so",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "die",
+    "deutsch": "Sprache",
+    "plural": "Sprachen",
+    "englisch": "language",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "sprechen (ich spreche – du sprichst – er spricht)",
+    "plural": "",
+    "englisch": "(I speak – you speak – he speaks)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "supergut",
+    "plural": "",
+    "englisch": "very good",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "der",
+    "deutsch": "Tag",
+    "plural": "Tage",
+    "englisch": "day",
+    "beispiel": "Guten Tag, Herr Maier."
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "Tschüss",
+    "plural": "",
+    "englisch": "bye",
+    "beispiel": "Tschüss, bis bald!"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "und",
+    "plural": "",
+    "englisch": "and",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "was",
+    "plural": "",
+    "englisch": "what",
+    "beispiel": "Was machst du morgen?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "welche",
+    "plural": "",
+    "englisch": "which",
+    "beispiel": "Welche Sprachen sprichst du?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "wer",
+    "plural": "",
+    "englisch": "who",
+    "beispiel": "Wer ist das?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "das",
+    "deutsch": "Wiedersehen",
+    "plural": "",
+    "englisch": "good bye",
+    "beispiel": "Auf Wiedersehen!"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "wie",
+    "plural": "",
+    "englisch": "how",
+    "beispiel": "Wie heißt du?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "wissen (ich weiß – du weißt – er weiß)",
+    "plural": "",
+    "englisch": "to know (I know – you know – he knows)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "wo",
+    "plural": "",
+    "englisch": "where",
+    "beispiel": "Wo wohnst du?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "",
+    "deutsch": "woher",
+    "plural": "",
+    "englisch": "where … from",
+    "beispiel": "Woher kommst du?"
+  },
+  {
+    "lektion": 1,
+    "artikel": "das",
+    "deutsch": "Wort",
+    "plural": "Wörter",
+    "englisch": "word",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "aber",
+    "plural": "",
+    "englisch": "but",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Adresse",
+    "plural": "Adressen",
+    "englisch": "address",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "alt",
+    "plural": "",
+    "englisch": "old",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "anmelden",
+    "plural": "",
+    "englisch": "register",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Anmeldung",
+    "plural": "",
+    "englisch": "registration",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "arbeiten (Sie arbeiten)",
+    "plural": "",
+    "englisch": "work (you work)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "das",
+    "deutsch": "Bild",
+    "plural": "Bilder",
+    "englisch": "image/photo",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Bruder",
+    "plural": "Brüder",
+    "englisch": "brother",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "buchstabieren",
+    "plural": "",
+    "englisch": "to spell",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "dein, deine",
+    "plural": "",
+    "englisch": "your/yours",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "einmal",
+    "plural": "",
+    "englisch": "once again",
+    "beispiel": "Noch einmal, bitte."
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Eltern (Pl.)",
+    "plural": "",
+    "englisch": "parents",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "falsch",
+    "plural": "",
+    "englisch": "wrong",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Familie",
+    "plural": "Familien",
+    "englisch": "family",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Familienname",
+    "plural": "Familiennamen",
+    "englisch": "surname",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Familienstand",
+    "plural": "",
+    "englisch": "marital status",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "das",
+    "deutsch": "Formular",
+    "plural": "Formulare",
+    "englisch": "form",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "geschieden",
+    "plural": "",
+    "englisch": "divorced/separated",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Geschwister (Pl.)",
+    "plural": "",
+    "englisch": "siblings",
+    "beispiel": "Hast du Geschwister?"
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "haben (ich habe – du hast – er hat)",
+    "plural": "",
+    "englisch": "to have (I have – you have – he has)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Handynummer",
+    "plural": "Handynummern",
+    "englisch": "mobile number",
+    "beispiel": "Wie ist deine Handynummer?"
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Hausnummer",
+    "plural": "Hausnummern",
+    "englisch": "house number",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "das",
+    "deutsch": "Heimatland",
+    "plural": "Heimatländer",
+    "englisch": "home country",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "hier",
+    "plural": "",
+    "englisch": "here",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "Ihr, Ihre",
+    "plural": "",
+    "englisch": "your (formal)/yours (formal)",
+    "beispiel": "Wie ist Ihre Adresse?"
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "in",
+    "plural": "",
+    "englisch": "in",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Information",
+    "plural": "Informationen",
+    "englisch": "information",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "das",
+    "deutsch": "Jahr",
+    "plural": "Jahre",
+    "englisch": "year",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "jetzt",
+    "plural": "",
+    "englisch": "now",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "kein, keine",
+    "plural": "",
+    "englisch": "no/none",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "das",
+    "deutsch": "Kind",
+    "plural": "Kinder",
+    "englisch": "child",
+    "beispiel": "Ich habe keine Kinder."
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Kindergarten",
+    "plural": "Kindergärten",
+    "englisch": "nursery",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Kontakt",
+    "plural": "Kontakte",
+    "englisch": "contact",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "leben (ich lebe – du lebst – er lebt)",
+    "plural": "",
+    "englisch": "to live (I live – you live – he lives)",
+    "beispiel": "Wo lebst du?"
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "ledig",
+    "plural": "",
+    "englisch": "single",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "E-Mail",
+    "plural": "E-Mails",
+    "englisch": "email",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "möchten (Sie möchten)",
+    "plural": "",
+    "englisch": "to like (you like)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Mutter",
+    "plural": "Mütter",
+    "englisch": "mother",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "nach",
+    "plural": "",
+    "englisch": "after",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Nachname",
+    "plural": "Nachnamen",
+    "englisch": "last name",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "noch",
+    "plural": "",
+    "englisch": "also",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Postleitzahl",
+    "plural": "Postleitzahlen",
+    "englisch": "postcode",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Schwester",
+    "plural": "Schwestern",
+    "englisch": "sister",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Schwägerin",
+    "plural": "",
+    "englisch": "sister-in-law",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Schwiegertochter",
+    "plural": "",
+    "englisch": "step-daughter",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Schwiegervater",
+    "plural": "",
+    "englisch": "step-father",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Sohn",
+    "plural": "Söhne",
+    "englisch": "son",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Straße",
+    "plural": "Straßen",
+    "englisch": "street",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Telefonnummer",
+    "plural": "Telefonnummern",
+    "englisch": "telephone number",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Tochter",
+    "plural": "Töchter",
+    "englisch": "daughter",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "über",
+    "plural": "",
+    "englisch": "about / via / over",
+    "beispiel": "Der Zug nach Basel fahrt über Stuttgart."
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Vater",
+    "plural": "Väter",
+    "englisch": "father",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "vergleichen (Sie vergleichen)",
+    "plural": "",
+    "englisch": "compare (you compare)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "verheiratet",
+    "plural": "",
+    "englisch": "married",
+    "beispiel": "Sind Sie verheiratet?"
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "verwitwet",
+    "plural": "",
+    "englisch": "widowed",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "viel, viele",
+    "plural": "",
+    "englisch": "many",
+    "beispiel": "Wie viele Kinder haben Sie?"
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Vorname",
+    "plural": "Vornamen",
+    "englisch": "forename",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "vorstellen",
+    "plural": "",
+    "englisch": "introduce",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "welcher, welche, welches",
+    "plural": "",
+    "englisch": "which",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "willkommen",
+    "plural": "",
+    "englisch": "welcome",
+    "beispiel": "Herzlich willkommen!"
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "wir",
+    "plural": "",
+    "englisch": "we",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "wohnen (ich wohne – du wohnst – er wohnt)",
+    "plural": "",
+    "englisch": "to live (I live – you live – he lives)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "der",
+    "deutsch": "Wohnort",
+    "plural": "",
+    "englisch": "place of residence",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "die",
+    "deutsch": "Zahl",
+    "plural": "Zahlen",
+    "englisch": "number",
+    "beispiel": ""
+  },
+  {
+    "lektion": 2,
+    "artikel": "",
+    "deutsch": "zu",
+    "plural": "",
+    "englisch": "too",
+    "beispiel": "Das ist jetzt leider zu spät."
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "also",
+    "plural": "",
+    "englisch": "well",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "an",
+    "plural": "",
+    "englisch": "on",
+    "beispiel": "Am Samstag ist kein Deutschkurs."
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "andere",
+    "plural": "",
+    "englisch": "other",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "benutzen (Sie benutzen)",
+    "plural": "",
+    "englisch": "use (to use)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Blatt",
+    "plural": "Blätter",
+    "englisch": "sheet (of paper)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Bleistift",
+    "plural": "Bleistifte",
+    "englisch": "pencil",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Buch",
+    "plural": "Bücher",
+    "englisch": "book",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "da",
+    "plural": "",
+    "englisch": "there",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Dienstag",
+    "plural": "",
+    "englisch": "Tuesday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "doch",
+    "plural": "",
+    "englisch": "indeed (speech particle, postitive confirmation)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Donnerstag",
+    "plural": "",
+    "englisch": "Thursday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "endlich",
+    "plural": "",
+    "englisch": "finally",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "erklären (ich erkläre – du erklärst – er erklärt)",
+    "plural": "",
+    "englisch": "to explain (I explain – you explain – he explains)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "erzählen (Sie erzählen)",
+    "plural": "",
+    "englisch": "to explain (you explain)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Familienfoto",
+    "plural": "",
+    "englisch": "family photo",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Feiertag",
+    "plural": "Feiertage",
+    "englisch": "public holiday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Fenster",
+    "plural": "",
+    "englisch": "window",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Foto",
+    "plural": "",
+    "englisch": "photo",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "fragen (ich frage – du fragst – er fragt)",
+    "plural": "",
+    "englisch": "ask (I ask – you ask – he asks)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Freitag",
+    "plural": "",
+    "englisch": "Friday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Freund",
+    "plural": "Freunde",
+    "englisch": "friend",
+    "beispiel": "Hast du schon Freunde hier?"
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "für",
+    "plural": "",
+    "englisch": "for",
+    "beispiel": "Sie nehmen die Wohnung für 750 Euro."
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "genau",
+    "plural": "",
+    "englisch": "exactly",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "gestern",
+    "plural": "",
+    "englisch": "yesterday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "groß",
+    "plural": "",
+    "englisch": "big",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Gruß",
+    "plural": "Grüße",
+    "englisch": "greeting",
+    "beispiel": "Viele Grüße"
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Hausaufgabe",
+    "plural": "Hausaufgaben",
+    "englisch": "homework",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Heft",
+    "plural": "Hefte",
+    "englisch": "booklet",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "heute",
+    "plural": "",
+    "englisch": "today",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "ihr",
+    "plural": "",
+    "englisch": "their/your",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "immer",
+    "plural": "",
+    "englisch": "always",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Karte",
+    "plural": "Karten",
+    "englisch": "card/map",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "klein",
+    "plural": "",
+    "englisch": "small",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "knifflig",
+    "plural": "",
+    "englisch": "tricky",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Kugelschreiber (Kuli)",
+    "plural": "Kugelschreiber",
+    "englisch": "ball-point pen (biro)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Kursbuch",
+    "plural": "",
+    "englisch": "course book",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Kursraum",
+    "plural": "",
+    "englisch": "classroom",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Lampe",
+    "plural": "Lampen",
+    "englisch": "lamp",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Landkarte",
+    "plural": "Landkarten",
+    "englisch": "map",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "langsam",
+    "plural": "",
+    "englisch": "slowly",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Lehrer",
+    "plural": "Lehrer",
+    "englisch": "teacher (male)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Lehrerin",
+    "plural": "Lehrerinnen",
+    "englisch": "teacher (female)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "lernen (ich lerne – du lernst – er lernt)",
+    "plural": "",
+    "englisch": "to learn (I learn – you learn – he learns)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "lesen (ich lese – du liest – er liest – ihr lest)",
+    "plural": "",
+    "englisch": "to read (I read – you read – he reads)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "liebe, lieber",
+    "plural": "",
+    "englisch": "dear",
+    "beispiel": "Liebe Laura, …"
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Liste",
+    "plural": "Listen",
+    "englisch": "list",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "machen (ich mache – du machst – er macht)",
+    "plural": "",
+    "englisch": "to make (I make – you make – he makes)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "mir",
+    "plural": "",
+    "englisch": "(to) me",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Mittwoch",
+    "plural": "",
+    "englisch": "Wednesday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Montag",
+    "plural": "",
+    "englisch": "Monday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "natürlich",
+    "plural": "",
+    "englisch": "of course",
+    "beispiel": "Noch einmal langsam bitte! – Natürlich."
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "nett",
+    "plural": "",
+    "englisch": "nice",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Papier",
+    "plural": "",
+    "englisch": "paper",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Papierkorb",
+    "plural": "",
+    "englisch": "waste paper bin",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Pause",
+    "plural": "Pausen",
+    "englisch": "break",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Problem",
+    "plural": "Probleme",
+    "englisch": "problem",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Projektor",
+    "plural": "",
+    "englisch": "projector",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Radiergummi",
+    "plural": "",
+    "englisch": "eraser",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Raum",
+    "plural": "",
+    "englisch": "room",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Rucksack",
+    "plural": "",
+    "englisch": "backpack",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Sache",
+    "plural": "Sachen",
+    "englisch": "thing",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "sagen (ich sage – du sagst – er sagt)",
+    "plural": "",
+    "englisch": "to say (I say – you say – he says)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Samstag",
+    "plural": "",
+    "englisch": "Saturday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "sehen (Sie sehen)",
+    "plural": "",
+    "englisch": "to see (I see – you see – he sees)",
+    "beispiel": "Was sehen Sie?"
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Seite",
+    "plural": "",
+    "englisch": "page",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Schlüssel",
+    "plural": "Schlüssel",
+    "englisch": "key",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "schnell",
+    "plural": "",
+    "englisch": "fast",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Sonntag",
+    "plural": "",
+    "englisch": "Sunday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Spaß",
+    "plural": "",
+    "englisch": "fun",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "spielen (Sie spielen)",
+    "plural": "",
+    "englisch": "to play (I play – you play – he plays)",
+    "beispiel": "Spielen Sie die Dialoge."
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Spitzer",
+    "plural": "",
+    "englisch": "pencil sharpener",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Stuhl",
+    "plural": "Stühle",
+    "englisch": "chair",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Tabelle",
+    "plural": "",
+    "englisch": "table",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Tafel",
+    "plural": "",
+    "englisch": "black/white board",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Tasche",
+    "plural": "",
+    "englisch": "bag",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Text",
+    "plural": "",
+    "englisch": "text",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Tisch",
+    "plural": "Tische",
+    "englisch": "table",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Tür",
+    "plural": "",
+    "englisch": "door",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "übermorgen",
+    "plural": "",
+    "englisch": "the day after tomorrow",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Übung",
+    "plural": "Übungen",
+    "englisch": "exercise",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Übungsbuch",
+    "plural": "",
+    "englisch": "exercise book",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "verstehen",
+    "plural": "",
+    "englisch": "to understand",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "vorgestern",
+    "plural": "",
+    "englisch": "the day before yesterday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Wand",
+    "plural": "",
+    "englisch": "wall",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "die",
+    "deutsch": "Woche",
+    "plural": "",
+    "englisch": "week",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Wochenende",
+    "plural": "",
+    "englisch": "weekend",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "das",
+    "deutsch": "Wörterbuch",
+    "plural": "Wörterbücher",
+    "englisch": "dictionary",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "zeigen (wir zeigen)",
+    "plural": "",
+    "englisch": "to show (we show)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "der",
+    "deutsch": "Zettel",
+    "plural": "Zettel",
+    "englisch": "note",
+    "beispiel": ""
+  },
+  {
+    "lektion": 3,
+    "artikel": "",
+    "deutsch": "zusammen",
+    "plural": "",
+    "englisch": "together",
+    "beispiel": "Wir gehen zusammen ins Kino."
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Angebot",
+    "plural": "Angebote",
+    "englisch": "offer",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Antwort",
+    "plural": "Antworten",
+    "englisch": "answer",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Apfel",
+    "plural": "Äpfel",
+    "englisch": "apple",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Apfelsaft",
+    "plural": "",
+    "englisch": "apple juice",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Aufgabe",
+    "plural": "Aufgaben",
+    "englisch": "task",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Babynahrung",
+    "plural": "",
+    "englisch": "baby food",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Banane",
+    "plural": "Bananen",
+    "englisch": "banana",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Becher",
+    "plural": "Becher",
+    "englisch": "container",
+    "beispiel": "ein Becher Joghurt"
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Beispiel",
+    "plural": "Beispiele",
+    "englisch": "example",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Bier",
+    "plural": "",
+    "englisch": "beer",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Birne",
+    "plural": "Birnen",
+    "englisch": "pear",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Bistro",
+    "plural": "",
+    "englisch": "bistro/café",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Blaubeere",
+    "plural": "Blaubeeren",
+    "englisch": "blueberry",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Bohne",
+    "plural": "Bohnen",
+    "englisch": "bean",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "brauchen",
+    "plural": "",
+    "englisch": "to need",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Brot",
+    "plural": "Brote",
+    "englisch": "bread",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Brötchen",
+    "plural": "Brötchen",
+    "englisch": "bread roll",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Cent",
+    "plural": "Cent",
+    "englisch": "cent",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Cola",
+    "plural": "Cola, Colas",
+    "englisch": "cola",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Couscous",
+    "plural": "",
+    "englisch": "couscous",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "denn",
+    "plural": "",
+    "englisch": "because",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "diese, dieser, dieses",
+    "plural": "",
+    "englisch": "this",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Dose",
+    "plural": "Dosen",
+    "englisch": "jar",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "durch",
+    "plural": "",
+    "englisch": "through",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Ei",
+    "plural": "Eier",
+    "englisch": "egg",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Einkaufszettel",
+    "plural": "",
+    "englisch": "shopping list",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "einige",
+    "plural": "",
+    "englisch": "a few",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Erbse",
+    "plural": "Erbsen",
+    "englisch": "pea",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Erdbeere",
+    "plural": "Erdbeeren",
+    "englisch": "strawberry",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "essen",
+    "plural": "",
+    "englisch": "to eat",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "etwas",
+    "plural": "",
+    "englisch": "something",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "fertig",
+    "plural": "",
+    "englisch": "finished",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Fisch",
+    "plural": "Fische",
+    "englisch": "fish",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Flasche",
+    "plural": "Flaschen",
+    "englisch": "bottle",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Fleisch",
+    "plural": "",
+    "englisch": "meat",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "frisch",
+    "plural": "",
+    "englisch": "fresh",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Frühstück",
+    "plural": "",
+    "englisch": "breakfast",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "frühstücken",
+    "plural": "",
+    "englisch": "to breakfast",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "gemeinsam",
+    "plural": "",
+    "englisch": "together",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Gemüse",
+    "plural": "",
+    "englisch": "vegetables",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "gern",
+    "plural": "",
+    "englisch": "very much",
+    "beispiel": "Ich esse gern Tomaten."
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Getränk",
+    "plural": "Getränke",
+    "englisch": "drink",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Glas",
+    "plural": "Gläser",
+    "englisch": "glass",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "gleich",
+    "plural": "",
+    "englisch": "the same",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Gramm",
+    "plural": "Gramm",
+    "englisch": "gram",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Himbeere",
+    "plural": "Himbeeren",
+    "englisch": "raspberry",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Honig",
+    "plural": "",
+    "englisch": "honey",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Joghurt",
+    "plural": "Joghurts",
+    "englisch": "yoghurt",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Kaffee",
+    "plural": "",
+    "englisch": "coffee",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Kartoffel",
+    "plural": "Kartoffeln",
+    "englisch": "potato",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Käse",
+    "plural": "",
+    "englisch": "cheese",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "kaufen",
+    "plural": "",
+    "englisch": "to buy",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Keks",
+    "plural": "Kekse",
+    "englisch": "biscuit",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Kichererbse",
+    "plural": "Kichererbsen",
+    "englisch": "chickpea",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Kilo",
+    "plural": "Kilos",
+    "englisch": "kilo",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Kirsche",
+    "plural": "Kirschen",
+    "englisch": "cherry",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Kiwi",
+    "plural": "Kiwis",
+    "englisch": "kiwi",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Kontrolle",
+    "plural": "Kontrollen",
+    "englisch": "control",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "kosten",
+    "plural": "",
+    "englisch": "to cost",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Kuchen",
+    "plural": "",
+    "englisch": "cake",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Kunde",
+    "plural": "Kunden",
+    "englisch": "customer (male)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Kundin",
+    "plural": "Kundinnen",
+    "englisch": "customer (female)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "kurz",
+    "plural": "",
+    "englisch": "short",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Lammfleisch",
+    "plural": "",
+    "englisch": "lamb meat",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Lebensmittel",
+    "plural": "Lebensmittel",
+    "englisch": "groceries",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Limonade (Limo)",
+    "plural": "Limonaden (Limos)",
+    "englisch": "lemonade",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Liter",
+    "plural": "Liter",
+    "englisch": "litre",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "man",
+    "plural": "",
+    "englisch": "one/you",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Mandarine",
+    "plural": "Mandarinen",
+    "englisch": "mandarine",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Mango",
+    "plural": "Mangos",
+    "englisch": "mango",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Markt",
+    "plural": "Märkte",
+    "englisch": "market",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Marmelade",
+    "plural": "Marmeladen",
+    "englisch": "jam",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Mehl",
+    "plural": "",
+    "englisch": "flour",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "meistens",
+    "plural": "",
+    "englisch": "mostly",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Mengenangabe",
+    "plural": "",
+    "englisch": "amount",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Melone",
+    "plural": "Melonen",
+    "englisch": "melon",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Milch",
+    "plural": "",
+    "englisch": "milk",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Milchprodukt",
+    "plural": "Milchprodukte",
+    "englisch": "dairy product",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "mögen",
+    "plural": "",
+    "englisch": "to like",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Möhre",
+    "plural": "Möhren",
+    "englisch": "carrot",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "müssen",
+    "plural": "",
+    "englisch": "to have to",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "nehmen",
+    "plural": "",
+    "englisch": "to take",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Nudel",
+    "plural": "Nudeln",
+    "englisch": "pasta/noodles",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "nur",
+    "plural": "",
+    "englisch": "only",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Obst",
+    "plural": "",
+    "englisch": "fruit",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Obstsalat",
+    "plural": "",
+    "englisch": "fruit salad",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Olivenöl",
+    "plural": "",
+    "englisch": "olive oil",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Orange",
+    "plural": "Orangen",
+    "englisch": "orange",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "ordnen",
+    "plural": "",
+    "englisch": "to order",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Packung",
+    "plural": "Packungen",
+    "englisch": "packaging",
+    "beispiel": "eine Packung Reis"
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Paprika",
+    "plural": "Paprikas",
+    "englisch": "pepper",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Partner",
+    "plural": "Partner",
+    "englisch": "partner (male)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Partnerin",
+    "plural": "Partnerinnen",
+    "englisch": "partner (female)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Pfund",
+    "plural": "",
+    "englisch": "pound",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Pilz",
+    "plural": "Pilze",
+    "englisch": "mushroom",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "planen",
+    "plural": "",
+    "englisch": "to plan",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Preis",
+    "plural": "Preise",
+    "englisch": "price",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "pro",
+    "plural": "",
+    "englisch": "per",
+    "beispiel": "Die Äpfel kosten 2,50 € pro Kilo."
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Pudding",
+    "plural": "",
+    "englisch": "pudding",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Reis",
+    "plural": "",
+    "englisch": "rice",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Rindfleisch",
+    "plural": "",
+    "englisch": "beef",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Saft",
+    "plural": "Säfte",
+    "englisch": "juice",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Sahne",
+    "plural": "",
+    "englisch": "cream",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Salat",
+    "plural": "Salate",
+    "englisch": "salad",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Salz",
+    "plural": "",
+    "englisch": "salt",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "sich",
+    "plural": "",
+    "englisch": "oneself",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "schmecken",
+    "plural": "",
+    "englisch": "to taste",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Schokolade",
+    "plural": "",
+    "englisch": "chocolate",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "schön",
+    "plural": "",
+    "englisch": "beautiful",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Schweinefleisch",
+    "plural": "",
+    "englisch": "pork",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "sonst",
+    "plural": "",
+    "englisch": "otherwise",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "stehen",
+    "plural": "",
+    "englisch": "to stand",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "streichen",
+    "plural": "",
+    "englisch": "to paint",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Stück",
+    "plural": "Stücke",
+    "englisch": "piece",
+    "beispiel": "ein Stück Kuchen"
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Tasse",
+    "plural": "Tassen",
+    "englisch": "cup",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Tee",
+    "plural": "",
+    "englisch": "tea",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "teuer",
+    "plural": "",
+    "englisch": "expensive",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Tipp",
+    "plural": "Tipps",
+    "englisch": "tip",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Tomate",
+    "plural": "Tomaten",
+    "englisch": "tomato",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Traube",
+    "plural": "Trauben",
+    "englisch": "grape",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "trinken",
+    "plural": "",
+    "englisch": "to drink",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "unterstreichen",
+    "plural": "",
+    "englisch": "to emphasize",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "verbinden",
+    "plural": "",
+    "englisch": "to connect",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Verkäufer",
+    "plural": "Verkäufer",
+    "englisch": "salesperson (male)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Verkäuferin",
+    "plural": "Verkäuferinnen",
+    "englisch": "salesperson (female)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "",
+    "deutsch": "von",
+    "plural": "",
+    "englisch": "from",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "das",
+    "deutsch": "Wasser",
+    "plural": "",
+    "englisch": "water",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Wein",
+    "plural": "",
+    "englisch": "wine",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Zitrone",
+    "plural": "Zitronen",
+    "englisch": "lemon",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "der",
+    "deutsch": "Zucker",
+    "plural": "",
+    "englisch": "sugar",
+    "beispiel": ""
+  },
+  {
+    "lektion": 4,
+    "artikel": "die",
+    "deutsch": "Zwiebel",
+    "plural": "Zwiebeln",
+    "englisch": "onion",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "abends",
+    "plural": "",
+    "englisch": "in the evenings",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Alltag",
+    "plural": "",
+    "englisch": "everyday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "anrufen",
+    "plural": "",
+    "englisch": "to call",
+    "beispiel": "Ich rufe dich an."
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Arbeit",
+    "plural": "",
+    "englisch": "work",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "aufstehen",
+    "plural": "",
+    "englisch": "to get up",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "beginnen",
+    "plural": "",
+    "englisch": "to start",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "beide",
+    "plural": "",
+    "englisch": "both",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "das",
+    "deutsch": "Bett",
+    "plural": "Betten",
+    "englisch": "bed",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "bis",
+    "plural": "",
+    "englisch": "until",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "das",
+    "deutsch": "Büro",
+    "plural": "Büros",
+    "englisch": "office",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Computer",
+    "plural": "Computer",
+    "englisch": "computer",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "das",
+    "deutsch": "Computerspiel",
+    "plural": "Computerspiele",
+    "englisch": "computer game",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "erst",
+    "plural": "",
+    "englisch": "first",
+    "beispiel": "Wir lernen erst Deutsch, dann gehen wir spazieren."
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "fernsehen",
+    "plural": "",
+    "englisch": "to watch television",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Film",
+    "plural": "Filme",
+    "englisch": "film",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Freundin",
+    "plural": "Freundinnen",
+    "englisch": "friend (female)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "früh",
+    "plural": "",
+    "englisch": "early",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Fußball",
+    "plural": "",
+    "englisch": "football",
+    "beispiel": "Ich spiele gern Fußball."
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "gehen",
+    "plural": "",
+    "englisch": "to go",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "geöffnet",
+    "plural": "",
+    "englisch": "open",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "grillen",
+    "plural": "",
+    "englisch": "to grill/barbeque",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "halb",
+    "plural": "",
+    "englisch": "half past",
+    "beispiel": "Es ist halb zwölf."
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Hunger",
+    "plural": "",
+    "englisch": "hunger",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Idee",
+    "plural": "Ideen",
+    "englisch": "idea",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "das",
+    "deutsch": "Interview",
+    "plural": "Interviews",
+    "englisch": "interview",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "kochen",
+    "plural": "",
+    "englisch": "to cook",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "können",
+    "plural": "",
+    "englisch": "to be able to",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "lecker",
+    "plural": "",
+    "englisch": "delicious",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "leider",
+    "plural": "",
+    "englisch": "unfortunately",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "manchmal",
+    "plural": "",
+    "englisch": "sometimes",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "mehr",
+    "plural": "",
+    "englisch": "more",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Mittag",
+    "plural": "",
+    "englisch": "midday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "mittags",
+    "plural": "",
+    "englisch": "at midday",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Mittagspause",
+    "plural": "",
+    "englisch": "lunchtime",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Morgen",
+    "plural": "",
+    "englisch": "morning",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "morgens",
+    "plural": "",
+    "englisch": "in the mornings",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "müde",
+    "plural": "",
+    "englisch": "tired",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Musik",
+    "plural": "",
+    "englisch": "music",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Nachmittag",
+    "plural": "",
+    "englisch": "afternoon",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "nachmittags",
+    "plural": "",
+    "englisch": "in the afternoons",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "nachts",
+    "plural": "",
+    "englisch": "at night",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "nie",
+    "plural": "",
+    "englisch": "never",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Notizzettel",
+    "plural": "",
+    "englisch": "note",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "oft",
+    "plural": "",
+    "englisch": "often",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Pizza",
+    "plural": "",
+    "englisch": "pizza",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "putzen",
+    "plural": "",
+    "englisch": "to clean",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "schade",
+    "plural": "",
+    "englisch": "shame",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "schlafen",
+    "plural": "",
+    "englisch": "to sleep",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Schluss",
+    "plural": "",
+    "englisch": "end, end of work",
+    "beispiel": "Um eins haben wir Schluss."
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Schule",
+    "plural": "Schulen",
+    "englisch": "school",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "spät",
+    "plural": "",
+    "englisch": "late",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "spazieren",
+    "plural": "",
+    "englisch": "to walk",
+    "beispiel": "Wir gehen im Park spazieren."
+  },
+  {
+    "lektion": 5,
+    "artikel": "das",
+    "deutsch": "Spiel",
+    "plural": "Spiele",
+    "englisch": "game",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Sport",
+    "plural": "",
+    "englisch": "sport",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Stunde",
+    "plural": "Stunden",
+    "englisch": "hour",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Stundenplan",
+    "plural": "",
+    "englisch": "schedule",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Supermarkt",
+    "plural": "",
+    "englisch": "supermarket",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "telefonieren",
+    "plural": "",
+    "englisch": "to telephone",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "tun",
+    "plural": "",
+    "englisch": "to do",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Uhr",
+    "plural": "",
+    "englisch": "clock",
+    "beispiel": "Die Uhr steht im Wohnzimmer."
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Uhrzeit",
+    "plural": "",
+    "englisch": "time",
+    "beispiel": "Es ist 14 Uhr."
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "um",
+    "plural": "",
+    "englisch": "at",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Unterricht",
+    "plural": "",
+    "englisch": "lesson",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "das",
+    "deutsch": "Viertel",
+    "plural": "",
+    "englisch": "quarter to",
+    "beispiel": "Es ist Viertel vor zehn."
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "vor",
+    "plural": "",
+    "englisch": "before",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "der",
+    "deutsch": "Vormittag",
+    "plural": "",
+    "englisch": "morning",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "vormittags",
+    "plural": "",
+    "englisch": "in the morning",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "wann",
+    "plural": "",
+    "englisch": "when",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Wohnung",
+    "plural": "Wohnungen",
+    "englisch": "flat",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "zeichnen",
+    "plural": "",
+    "englisch": "to draw",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "die",
+    "deutsch": "Zeit",
+    "plural": "",
+    "englisch": "time",
+    "beispiel": ""
+  },
+  {
+    "lektion": 5,
+    "artikel": "",
+    "deutsch": "zu Hause",
+    "plural": "",
+    "englisch": "at home",
+    "beispiel": "Ich bin zu Hause."
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "ab",
+    "plural": "",
+    "englisch": "from",
+    "beispiel": "Die Wohnung ist ab 1.5. frei."
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Altbau",
+    "plural": "",
+    "englisch": "old building",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Angabe",
+    "plural": "Angaben",
+    "englisch": "detail",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Anzeige",
+    "plural": "Anzeigen",
+    "englisch": "advert",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Arbeitszimmer",
+    "plural": "",
+    "englisch": "workroom",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Bad",
+    "plural": "Bäder",
+    "englisch": "bathroom",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "baden",
+    "plural": "",
+    "englisch": "to bathe",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Badewanne",
+    "plural": "",
+    "englisch": "bathtub",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Badezimmer",
+    "plural": "",
+    "englisch": "bathroom",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Balkon",
+    "plural": "Balkone",
+    "englisch": "balcony",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Bauernhof",
+    "plural": "Bauernhöfe",
+    "englisch": "farm",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "bei",
+    "plural": "",
+    "englisch": "at",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "bekommen",
+    "plural": "",
+    "englisch": "to receive",
+    "beispiel": "Meine Blumen bekommen jeden Tag Wasser."
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Besichtigungstermin",
+    "plural": "",
+    "englisch": "appointment",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "besser",
+    "plural": "",
+    "englisch": "better",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "billig",
+    "plural": "",
+    "englisch": "cheap",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "breit",
+    "plural": "",
+    "englisch": "wide",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "circa",
+    "plural": "",
+    "englisch": "around",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "dazu",
+    "plural": "",
+    "englisch": "in addition",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Diele",
+    "plural": "",
+    "englisch": "hallway",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "direkt",
+    "plural": "",
+    "englisch": "direct",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "dort",
+    "plural": "",
+    "englisch": "there",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "draußen",
+    "plural": "",
+    "englisch": "outside",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "dringend",
+    "plural": "",
+    "englisch": "urgent",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "dunkel",
+    "plural": "",
+    "englisch": "dark",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Dusche",
+    "plural": "",
+    "englisch": "shower",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Einfamilienhaus",
+    "plural": "",
+    "englisch": "detached hosue",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "einkaufen",
+    "plural": "",
+    "englisch": "to shop",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Elektrogerät",
+    "plural": "Elektrogeräte",
+    "englisch": "electronic device",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Erdgeschoss",
+    "plural": "",
+    "englisch": "ground floor",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "ersetzen",
+    "plural": "",
+    "englisch": "to replace",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Euro",
+    "plural": "Euros",
+    "englisch": "euro",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Fernseher",
+    "plural": "Fernseher",
+    "englisch": "television",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "finden",
+    "plural": "",
+    "englisch": "to find",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Firma",
+    "plural": "Firmen",
+    "englisch": "company",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Flur",
+    "plural": "Flure",
+    "englisch": "corridor",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "frei",
+    "plural": "",
+    "englisch": "free",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Garage",
+    "plural": "Garagen",
+    "englisch": "garage",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Garten",
+    "plural": "Gärten",
+    "englisch": "garden",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Gast",
+    "plural": "Gäste",
+    "englisch": "guest",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Geld",
+    "plural": "Gelder",
+    "englisch": "money",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "gemütlich",
+    "plural": "",
+    "englisch": "comfortable",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "gepflegt",
+    "plural": "",
+    "englisch": "looked after",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Gerät",
+    "plural": "Geräte",
+    "englisch": "appliance",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Geschäft",
+    "plural": "Geschäfte",
+    "englisch": "business",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Gespräch",
+    "plural": "Gespräche",
+    "englisch": "interview",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Größe",
+    "plural": "",
+    "englisch": "size",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "grün",
+    "plural": "",
+    "englisch": "green",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "hängen",
+    "plural": "",
+    "englisch": "to hang",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "hässlich",
+    "plural": "",
+    "englisch": "ugly",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Hauptsache",
+    "plural": "",
+    "englisch": "main thing",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Haus",
+    "plural": "Häuser",
+    "englisch": "house",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Haustier",
+    "plural": "Haustiere",
+    "englisch": "pet",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Heizung",
+    "plural": "",
+    "englisch": "heating",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "helfen",
+    "plural": "",
+    "englisch": "to help",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "hell",
+    "plural": "",
+    "englisch": "light",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Herd",
+    "plural": "",
+    "englisch": "stove",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Hilfe",
+    "plural": "",
+    "englisch": "help",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "hinten",
+    "plural": "",
+    "englisch": "behind",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Hochhaus",
+    "plural": "",
+    "englisch": "high-rise building",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "ihr, ihre",
+    "plural": "",
+    "englisch": "your/yours",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Immobilie",
+    "plural": "Immobilien",
+    "englisch": "property",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "insgesamt",
+    "plural": "",
+    "englisch": "in total",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "interessant",
+    "plural": "",
+    "englisch": "interesting",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "jeder, jede, jedes",
+    "plural": "",
+    "englisch": "every",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Juni",
+    "plural": "",
+    "englisch": "june",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Kaffeemaschine",
+    "plural": "",
+    "englisch": "coffee machine",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "kalt",
+    "plural": "",
+    "englisch": "cold",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Kaution",
+    "plural": "",
+    "englisch": "deposit",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Keller",
+    "plural": "Keller",
+    "englisch": "celler",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Kinderzimmer",
+    "plural": "",
+    "englisch": "child's room",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Kleiderschrank",
+    "plural": "",
+    "englisch": "wardrobe",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Küche",
+    "plural": "Küchen",
+    "englisch": "kitchen",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Kühlschrank",
+    "plural": "Kühlschränke",
+    "englisch": "fridge",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "lang",
+    "plural": "",
+    "englisch": "long",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "lassen",
+    "plural": "",
+    "englisch": "to let",
+    "beispiel": "Lass uns in einem anderen Geschäft schauen."
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "laut",
+    "plural": "",
+    "englisch": "loud",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "liebsten (am liebsten)",
+    "plural": "",
+    "englisch": "favourite (at best)",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "liegen",
+    "plural": "",
+    "englisch": "to lie",
+    "beispiel": "Die Wohnung liegt direkt an der Hauptstraße."
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "maximal",
+    "plural": "",
+    "englisch": "maximal",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Mehrfamilienhaus",
+    "plural": "",
+    "englisch": "apartment building",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Miete",
+    "plural": "",
+    "englisch": "rent",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "mindestens",
+    "plural": "",
+    "englisch": "at least",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Möbel (Pl.)",
+    "plural": "",
+    "englisch": "furniture",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "möbliert",
+    "plural": "",
+    "englisch": "furnished",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "modern",
+    "plural": "",
+    "englisch": "modern",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Monat",
+    "plural": "Monate",
+    "englisch": "month",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Monatsmiete",
+    "plural": "Monatsmieten",
+    "englisch": "monthly rent",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Müll",
+    "plural": "",
+    "englisch": "rubbish",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "neben",
+    "plural": "",
+    "englisch": "next to",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Nebenkosten",
+    "plural": "Nebenkosten",
+    "englisch": "additional costs",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "ohne",
+    "plural": "",
+    "englisch": "without",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Obergeschoss",
+    "plural": "",
+    "englisch": "upper floor",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Ort",
+    "plural": "Orte",
+    "englisch": "place",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Pflanze",
+    "plural": "Pflanzen",
+    "englisch": "plant",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Plan",
+    "plural": "Pläne",
+    "englisch": "plan",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Platz",
+    "plural": "Plätze",
+    "englisch": "place, space",
+    "beispiel": "Wir brauchen mehr Platz."
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Quadratmeter",
+    "plural": "Quadratmeter",
+    "englisch": "squaremetre",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Regal",
+    "plural": "Regale",
+    "englisch": "shelves",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Reihenhaus",
+    "plural": "",
+    "englisch": "terraced house",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "ruhig",
+    "plural": "",
+    "englisch": "peaceful",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "schauen",
+    "plural": "",
+    "englisch": "to look",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Schlafzimmer",
+    "plural": "",
+    "englisch": "bedroom",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "schmal",
+    "plural": "",
+    "englisch": "narrow",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Schrank",
+    "plural": "Schränke",
+    "englisch": "cupboard",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Sessel",
+    "plural": "Sessel",
+    "englisch": "chair",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "singen",
+    "plural": "",
+    "englisch": "to sing",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "sitzen",
+    "plural": "",
+    "englisch": "to sit",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Sofa",
+    "plural": "Sofas",
+    "englisch": "sofa",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "sofort",
+    "plural": "",
+    "englisch": "straight away",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "sollen",
+    "plural": "",
+    "englisch": "to be supposed to",
+    "beispiel": "Sollen wir ins Kino gehen?"
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Sonderangebot",
+    "plural": "Sonderangebote",
+    "englisch": "special offer",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Sonne",
+    "plural": "",
+    "englisch": "sun",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "sonstiges",
+    "plural": "",
+    "englisch": "other",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Sprachschule",
+    "plural": "",
+    "englisch": "language school",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "spülen",
+    "plural": "",
+    "englisch": "to rinse",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Spülmaschine",
+    "plural": "Spülmaschinen",
+    "englisch": "dishwasher",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Stadt",
+    "plural": "Städte",
+    "englisch": "city",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "suchen",
+    "plural": "",
+    "englisch": "to look for",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "super",
+    "plural": "",
+    "englisch": "super",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "der",
+    "deutsch": "Teppich",
+    "plural": "",
+    "englisch": "carpet",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Terrasse",
+    "plural": "Terrassen",
+    "englisch": "terrace",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Toilette",
+    "plural": "Toiletten",
+    "englisch": "toilet",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "toll",
+    "plural": "",
+    "englisch": "great",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Traumwohnung",
+    "plural": "",
+    "englisch": "dream flat",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "unbedingt",
+    "plural": "",
+    "englisch": "definitely",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "ungemütlich",
+    "plural": "",
+    "englisch": "uncomfortable",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "unser, unsere",
+    "plural": "",
+    "englisch": "our/ours",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "warum",
+    "plural": "",
+    "englisch": "why",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "waschen",
+    "plural": "",
+    "englisch": "to wash",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Waschmaschine",
+    "plural": "",
+    "englisch": "washing machine",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "WC",
+    "plural": "",
+    "englisch": "WC/toilet",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "wegziehen",
+    "plural": "",
+    "englisch": "to move away",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "weiter",
+    "plural": "",
+    "englisch": "further",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "wenn",
+    "plural": "",
+    "englisch": "if/when",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "werden",
+    "plural": "",
+    "englisch": "to become",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "wichtig",
+    "plural": "",
+    "englisch": "important",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "wohnen",
+    "plural": "",
+    "englisch": "to live",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Wohnungsanzeige",
+    "plural": "",
+    "englisch": "flat advertisement",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Wohnungssuche",
+    "plural": "",
+    "englisch": "search for housing",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Wohnzimmer",
+    "plural": "",
+    "englisch": "living room",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "wunderschön",
+    "plural": "",
+    "englisch": "very beautiful",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "wünschen",
+    "plural": "",
+    "englisch": "to wish",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "zahlen",
+    "plural": "",
+    "englisch": "to count",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "die",
+    "deutsch": "Zeitung",
+    "plural": "Zeitungen",
+    "englisch": "newspaper",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Zentrum",
+    "plural": "",
+    "englisch": "centre",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "das",
+    "deutsch": "Zimmer",
+    "plural": "Zimmer",
+    "englisch": "room",
+    "beispiel": ""
+  },
+  {
+    "lektion": 6,
+    "artikel": "",
+    "deutsch": "zu Fuß",
+    "plural": "",
+    "englisch": "on foot",
+    "beispiel": ""
+  }
+]
