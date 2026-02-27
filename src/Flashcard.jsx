@@ -1,16 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, onSwipeRight, darkMode }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
   const [loading, setLoading] = useState(false);
-  const [justSwiped, setJustSwiped] = useState(null); // 'left' | 'right'
+  const [justSwiped, setJustSwiped] = useState(null);
 
   const touchStartX = useRef(null);
   const touchStartY = useRef(null);
   const isTouchDevice = useRef(false);
-  const SWIPE_THRESHOLD = 50;
+  const touchStartTime = useRef(null);
+  const SWIPE_THRESHOLD = 80; // increased from 50 → less sensitive
 
   useEffect(() => {
     setIsFlipped(false);
@@ -33,38 +34,63 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
   }, [translation, article, word]);
 
   const playAudio = (e) => {
+    // Stop ALL propagation so the card never sees this touch/click
     e.stopPropagation();
+    e.nativeEvent?.stopImmediatePropagation();
     const u = new SpeechSynthesisUtterance(word);
     u.lang = 'de-DE';
     window.speechSynthesis.speak(u);
+  };
+
+  // Also block touch events on the audio button from reaching the card
+  const handleAudioTouchEnd = (e) => {
+    e.stopPropagation();
+    e.nativeEvent?.stopImmediatePropagation();
+    playAudio(e);
   };
 
   const handleTouchStart = (e) => {
     isTouchDevice.current = true;
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
+    touchStartTime.current = Date.now();
   };
 
   const handleTouchEnd = (e) => {
     if (touchStartX.current === null) return;
+
     const deltaX = e.changedTouches[0].clientX - touchStartX.current;
     const deltaY = e.changedTouches[0].clientY - touchStartY.current;
+    const elapsed = Date.now() - touchStartTime.current;
 
-    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > SWIPE_THRESHOLD) {
-      if (deltaX < 0) { setJustSwiped('left'); setTimeout(() => setJustSwiped(null), 400); onSwipeLeft?.(); }
-      else { setJustSwiped('right'); setTimeout(() => setJustSwiped(null), 400); onSwipeRight?.(); }
+    const isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > SWIPE_THRESHOLD;
+    // Also require it wasn't just a very quick tap (< 120ms) to avoid accidental swipes
+    const isIntentionalSwipe = isHorizontalSwipe && elapsed > 120;
+
+    if (isIntentionalSwipe) {
+      if (deltaX < 0) {
+        setJustSwiped('left');
+        setTimeout(() => setJustSwiped(null), 400);
+        onSwipeLeft?.();
+      } else {
+        setJustSwiped('right');
+        setTimeout(() => setJustSwiped(null), 400);
+        onSwipeRight?.();
+      }
     } else {
+      // It's a tap — flip
       setIsFlipped(prev => !prev);
     }
+
     touchStartX.current = null;
     touchStartY.current = null;
+    touchStartTime.current = null;
   };
 
   const handleClick = () => {
     if (!isTouchDevice.current) setIsFlipped(prev => !prev);
   };
 
-  // Article colors — refined palette
   const articleMeta = {
     der: { border: '#3b82f6', label: '#3b82f6', badge: 'rgba(59,130,246,0.1)' },
     die: { border: '#ef4444', label: '#ef4444', badge: 'rgba(239,68,68,0.1)' },
@@ -110,8 +136,8 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
           position: absolute;
           top: 1rem;
           right: 1rem;
-          width: 2.4rem;
-          height: 2.4rem;
+          width: 2.8rem;
+          height: 2.8rem;
           border-radius: 50%;
           border: none;
           cursor: pointer;
@@ -121,6 +147,9 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
           font-size: 1rem;
           transition: all 0.2s ease;
           background: ${audioBg};
+          /* Ensure it sits above the card's touch layer */
+          z-index: 10;
+          -webkit-tap-highlight-color: transparent;
         }
         .audio-btn:hover { transform: scale(1.1); background: ${audioHover}; }
         .article-badge {
@@ -263,7 +292,15 @@ const Flashcard = ({ word, article, translation, plural, beispiel, onSwipeLeft, 
             justifyContent: 'center',
             transition: 'background 0.4s, box-shadow 0.4s',
           }}>
-            <button className="audio-btn" onClick={playAudio} title="Aussprechen">🔊</button>
+            {/* Audio button with its own touch handler to block propagation */}
+            <button
+              className="audio-btn"
+              onClick={playAudio}
+              onTouchEnd={handleAudioTouchEnd}
+              title="Aussprechen"
+            >
+              🔊
+            </button>
 
             {article && <span className="article-badge">{article}</span>}
             <h2 className="card-word">{word}</h2>
