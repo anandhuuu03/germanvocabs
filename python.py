@@ -1,23 +1,31 @@
 import pdfplumber
 import json
 import re
+import os
 
-pdf_path = "Einfach_gut_A1.1_Wortschatzliste_Englisch.pdf"
+# Paths for the new PDF and the existing JSON
+pdf_path = "Einfach_gut_A1.2_Wortschatzliste_Englisch.pdf"
 output_path = "vocab.json"
 
-vocab_list = []
+# 1. Load existing data if the file exists, otherwise start with an empty list
+if os.path.exists(output_path):
+    with open(output_path, 'r', encoding='utf-8') as f:
+        vocab_list = json.load(f)
+    print(f"Loaded {len(vocab_list)} existing words from {output_path}")
+else:
+    vocab_list = []
+    print("No existing vocab.json found. Creating a new list.")
+
 current_lektion = 0
 
+# 2. Extract data from the new PDF
 with pdfplumber.open(pdf_path) as pdf:
     for page in pdf.pages:
-        # Extract tables from the page
         tables = page.extract_tables()
         for table in tables:
             for row in table:
-                # Clean out empty cells and replace newlines with spaces
                 cleaned_row = [str(cell).replace('\n', ' ').strip() if cell else "" for cell in row]
                 
-                # Skip completely empty rows
                 if not any(cleaned_row):
                     continue
                     
@@ -29,12 +37,12 @@ with pdfplumber.open(pdf_path) as pdf:
                     if match:
                         current_lektion = int(match.group(1))
                     continue
-                    
+                
                 # Skip the header row
                 if len(cleaned_row) > 1 and "Deutsch" in cleaned_row[1]:
                     continue
-                    
-                # If there's a German word, add it to the JSON array
+                
+                # If there's a German word, add it to our list
                 if len(cleaned_row) >= 4 and cleaned_row[1] and cleaned_row[1] != "Wörter":
                     vocab_list.append({
                         "lektion": current_lektion,
@@ -45,7 +53,8 @@ with pdfplumber.open(pdf_path) as pdf:
                         "beispiel": cleaned_row[4] if len(cleaned_row) > 4 else ""
                     })
 
+# 3. Save the combined list (1-12) back to the same file
 with open(output_path, 'w', encoding='utf-8') as f:
     json.dump(vocab_list, f, ensure_ascii=False, indent=2)
 
-print(f"Successfully extracted {len(vocab_list)} words into {output_path}!")
+print(f"Update complete! Total words in {output_path}: {len(vocab_list)}")
