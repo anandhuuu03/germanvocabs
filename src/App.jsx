@@ -3,6 +3,7 @@ import MainPage from "./mainpage/MainPage";
 import GrammarPage from "./grammar/GrammarPage";
 import BasicsPage from "./basics/BasicsPage"; 
 import TopicsPage from "./topics/TopicsPage";
+import ChaptersPage from "./chapter/Chapterspage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/grammar" element={<GrammarPage />} />
         <Route path="/basics" element={<BasicsPage />} />
         <Route path="/topics" element={<TopicsPage />} />
+        <Route path="/chapters" element={<ChaptersPage />} />
       </Routes>
     </div>
   );
