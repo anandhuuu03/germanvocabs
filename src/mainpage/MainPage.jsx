@@ -111,25 +111,38 @@ const MainPage = () => {
         .light .dark-toggle:hover { background: rgba(0,0,0,0.06); }
         .dark .dark-toggle:hover { background: rgba(255,255,255,0.08); }
 
-        .header-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-.grammar-link {
-  text-decoration: none;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-.light .grammar-link { border: 1.5px solid #1a1a1a; color: #1a1a1a; }
-.light .grammar-link:hover { background: #1a1a1a; color: #f5f0e8; }
-.dark .grammar-link { border: 1.5px solid #f0ebe0; color: #f0ebe0; }
-.dark .grammar-link:hover { background: #f0ebe0; color: #0f0f0f; }
-      
+        /* Nav links row */
+        .nav-links {
+          display: flex;
+          gap: 0.4rem;
+          overflow-x: auto;
+          width: 100%;
+          padding-bottom: 0.5rem;
+          margin-bottom: 0.75rem;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+        }
+        .nav-links::-webkit-scrollbar { display: none; }
+        .nav-link {
+          flex-shrink: 0;
+          text-decoration: none;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.78rem;
+          font-weight: 600;
+          padding: 0.35rem 0.75rem;
+          border-radius: 8px;
+          border: 1.5px solid transparent;
+          transition: all 0.2s ease;
+          white-space: nowrap;
+          cursor: pointer;
+          background: none;
+          display: inline-block;
+        }
+        .light .nav-link { border-color: #d0c8b8; color: #1a1a1a; background: white; }
+        .light .nav-link:hover { background: #1a1a1a; color: #f5f0e8; border-color: #1a1a1a; }
+        .dark .nav-link { border-color: #2e2e2e; color: #ccc; background: #1a1a1a; }
+        .dark .nav-link:hover { background: #f0ebe0; color: #0f0f0f; border-color: #f0ebe0; }
+        .nav-link.dim { opacity: 0.35; cursor: default; pointer-events: none; }
 
         /* Chapter pills */
         .chapter-row {
@@ -351,19 +364,24 @@ const MainPage = () => {
               <span>Einfach gut!</span>
               Deutsch A1
             </div>
-            <div className="header-actions">
-    <Link to="/basics" className="grammar-link">Basics 🎒</Link>
-    <Link to="/topics" className="grammar-link">Topics 🌍</Link>
-    <Link to="/grammar" className="grammar-link">Grammar 📖</Link>
-    <button className="dark-toggle" onClick={() => setDarkMode(!dm)} title="Toggle theme">
-      {dm ? '☀️' : '🌙'}
-    </button>
-  </div>
+            <button className="dark-toggle" onClick={() => setDarkMode(!dm)} title="Toggle theme">
+              {dm ? '☀️' : '🌙'}
+            </button>
           </div>
 
-          {/* Chapter Row — sits outside app-content flow to allow full-width scroll */}
+          {/* Scrollable nav links */}
+          <div className="nav-links fade-in">
+            <Link to="/basics"   className="nav-link">Basics 🎒</Link>
+            <Link to="/grammar"  className="nav-link">Grammar 📖</Link>
+            <Link to="/chapters" className="nav-link">Chapters 📚</Link>
+            <Link to="/topics"   className="nav-link">Topics 🌍</Link>
+            <span className="nav-link dim">Practice 🎯</span>
+            <span className="nav-link dim">Tests 📝</span>
+          </div>
+
+          {/* Chapter Row */}
           <div className="chapter-row fade-in">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(num => (
+            {[1,2,3,4,5,6,7,8,9,10,11,12].map(num => (
               <button
                 key={num}
                 onClick={() => setChapter(num)}
@@ -376,7 +394,7 @@ const MainPage = () => {
 
           {/* Category Row */}
           <div className="category-row fade-in">
-            {['All', 'Nouns', 'Verbs/Others'].map(cat => (
+            {['All','Nouns','Verbs/Others'].map(cat => (
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}
@@ -401,7 +419,7 @@ const MainPage = () => {
                     onClick={() => { setCurrentIndex(index); setShowList(false); }}
                     className={`jump-item ${currentIndex === index ? 'active' : ''}`}
                   >
-                    <span style={{ opacity: 0.5, fontSize: '0.75rem' }}>{word.artikel}</span>
+                    <span style={{opacity: 0.5, fontSize: '0.75rem'}}>{word.artikel}</span>
                     <span>{word.deutsch}</span>
                     <span className="jump-item-en">{word.englisch}</span>
                   </button>
@@ -414,7 +432,7 @@ const MainPage = () => {
           <p className="counter fade-in">{currentIndex + 1} / {filteredWords.length}</p>
 
           {/* Flashcard */}
-          <div style={{ width: '100%', maxWidth: 340, zIndex: 0 }} className="fade-in">
+          <div style={{width: '100%', maxWidth: 340, zIndex: 0}} className="fade-in">
             {filteredWords.length > 0 ? (
               <Flashcard
                 word={filteredWords[currentIndex].deutsch}
@@ -425,7 +443,7 @@ const MainPage = () => {
                 darkMode={dm}
               />
             ) : (
-              <p style={{ opacity: 0.4, textAlign: 'center', marginTop: '3rem' }}>No words found.</p>
+              <p style={{opacity: 0.4, textAlign: 'center', marginTop: '3rem'}}>No words found.</p>
             )}
           </div>
 
