@@ -7,5 +7,6 @@ export default defineConfig({
     react(), 
     tailwindcss(),
   ],
-  base: '/germanvocabs/'
+  // If building on Vercel, use root. Otherwise, use the GitHub repo path.
+  base: process.env.VERCEL ? '/' : '/germanvocabs/',
 })
