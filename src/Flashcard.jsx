@@ -11,19 +11,21 @@ const Flashcard = ({ word, article, translation, plural, beispiel, darkMode }) =
     setImageUrl('');
     setLoading(false);
 
-    const blockImagesFor = ['Entschuldigung', 'Aussage', 'Grammatik'];
-    if (article && !blockImagesFor.includes(word)) {
-      setLoading(true);
-      fetch(`https://api.pexels.com/v1/search?query=${translation}&per_page=1`, {
-        headers: { Authorization: 'cCGQTJQyePM3EscpXJK5vBWE3n1ON2EGhsMyFJNhkjBxiCjcZe4v78Xl' }
+    /* Commenting out Pexels API for now
+  const blockImagesFor = ['Entschuldigung', 'Aussage', 'Grammatik'];
+  if (article && !blockImagesFor.includes(word)) {
+    setLoading(true);
+    fetch(`https://api.pexels.com/v1/search?query=${translation}&per_page=1`, {
+      headers: { Authorization: 'cCGQTJQyePM3EscpXJK5vBWE3n1ON2EGhsMyFJNhkjBxiCjcZe4v78Xl' }
+    })
+      .then(r => r.json())
+      .then(data => {
+        if (data.photos?.length > 0) setImageUrl(data.photos[0].src.medium);
+        setLoading(false);
       })
-        .then(r => r.json())
-        .then(data => {
-          if (data.photos?.length > 0) setImageUrl(data.photos[0].src.medium);
-          setLoading(false);
-        })
-        .catch(() => setLoading(false));
-    }
+      .catch(() => setLoading(false));
+  }
+  */
   }, [translation, article, word]);
 
   const playAudio = (e) => {
