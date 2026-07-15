@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+const LEVELS = ['A1', 'A2', 'B1'];
+
+const TABS_BY_LEVEL = {
+  A1: ['Family', 'Colors', 'City & Travel', 'Food & Drink'],
+  A2: ['Work & Tech', 'Health & Body', 'Shopping'],
+  B1: ['Media & IT', 'Advanced Travel', 'Environment & Society'],
+};
+
 const TopicsPage = () => {
-  const [activeTab, setActiveTab] = useState('Family');
+  const [level, setLevel] = useState('A1');
+  const [activeTab, setActiveTab] = useState(TABS_BY_LEVEL['A1'][0]);
   const [darkMode, setDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -10,7 +19,11 @@ const TopicsPage = () => {
     setMounted(true);
   }, []);
 
-  const tabs = ['Family', 'Colors', 'City & Travel', 'Food & Drink'];
+  const changeLevel = (lvl) => {
+    setLevel(lvl);
+    setActiveTab(TABS_BY_LEVEL[lvl][0]);
+  };
+
   const dm = darkMode;
 
   return (
@@ -107,6 +120,21 @@ const TopicsPage = () => {
         .dark .grammar-link { border: 1.5px solid #f0ebe0; color: #f0ebe0; }
         .dark .grammar-link:hover { background: #f0ebe0; color: #0f0f0f; }
 
+        /* Level pills */
+        .gr-level-row { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; width: 100%; max-width: 340px; }
+        .gr-level-btn {
+          flex: 1; padding: 0.55rem 0.5rem; border-radius: 10px;
+          font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700;
+          letter-spacing: 0.04em; border: 1.5px solid transparent; cursor: pointer;
+          transition: all 0.2s ease; text-align: center;
+        }
+        .light .gr-level-btn { background: white; color: #888; border-color: #e0d8cc; }
+        .light .gr-level-btn:hover { border-color: #aaa; color: #1a1a1a; }
+        .light .gr-level-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+        .dark .gr-level-btn { background: #1e1e1e; color: #777; border-color: #2e2e2e; }
+        .dark .gr-level-btn:hover { border-color: #555; color: #f0ebe0; }
+        .dark .gr-level-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+
         /* Chapter/Tab pills */
         .chapter-row {
           display: flex;
@@ -182,9 +210,9 @@ const TopicsPage = () => {
         .text-muted { opacity: 0.5; font-size: 0.85rem; }
         .topic-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; }
 
-        .fade-in { animation: fadeUp 0.5s ease both; }
+        .fade-in { animation: fadeUp 0.35s ease both; }
         @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(12px); }
+          from { opacity: 0; transform: translateY(8px); }
           to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
@@ -206,9 +234,18 @@ const TopicsPage = () => {
             </div>
           </div>
 
+          {/* Level Switcher */}
+          <div className="gr-level-row fade-in" style={{ animationDelay: '0.05s' }}>
+            {LEVELS.map(lvl => (
+              <button key={lvl} onClick={() => changeLevel(lvl)} className={`gr-level-btn ${level === lvl ? 'active' : ''}`}>
+                {lvl}
+              </button>
+            ))}
+          </div>
+
           {/* Tab Row */}
-          <div className="chapter-row fade-in" style={{ animationDelay: '0.05s' }}>
-            {tabs.map(tab => (
+          <div className="chapter-row fade-in" style={{ animationDelay: '0.1s' }}>
+            {TABS_BY_LEVEL[level].map(tab => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -219,13 +256,9 @@ const TopicsPage = () => {
             ))}
           </div>
 
-          {/* --- FAMILY TAB --- */}
-          {activeTab === 'Family' && (
-            <div className="topic-grid grid-cols-3 fade-in w-full" style={{ animationDelay: '0.1s' }}>
-              
-
-
-
+          {/* ========================================= A1 CONTENT ========================================= */}
+          {level === 'A1' && activeTab === 'Family' && (
+            <div className="topic-grid grid-cols-3 fade-in w-full" style={{ animationDelay: '0.15s' }}>
               <div className="topic-card">
                 <h3 className="topic-title" style={{ color: dm ? '#60a5fa' : '#2563eb' }}>Masculine (der)</h3>
                 {[
@@ -261,11 +294,9 @@ const TopicsPage = () => {
             </div>
           )}
 
-          {/* --- COLORS TAB --- */}
-          {activeTab === 'Colors' && (
-            <div className="topic-card fade-in w-full" style={{ animationDelay: '0.1s' }}>
+          {level === 'A1' && activeTab === 'Colors' && (
+            <div className="topic-card fade-in w-full" style={{ animationDelay: '0.15s' }}>
               <h2 className="topic-title">Die Farben (Colors & Modifiers)</h2>
-              
               <div className="topic-grid">
                 {[
                   { c: 'rot', e: 'red', hex: '#ef4444' },
@@ -302,11 +333,9 @@ const TopicsPage = () => {
             </div>
           )}
 
-          {/* --- CITY & TRAVEL TAB --- */}
-          {activeTab === 'City & Travel' && (
-            <div className="topic-grid fade-in w-full" style={{ animationDelay: '0.1s' }}>
+          {level === 'A1' && activeTab === 'City & Travel' && (
+            <div className="topic-grid fade-in w-full" style={{ animationDelay: '0.15s' }}>
               <div className="topic-card">
-                
                 <h2 className="topic-title">Wegbeschreibung (Directions)</h2>
                 {[
                   ['geradeaus', 'straight ahead', '⬆️'], ['links', 'left', '⬅️'], ['rechts', 'right', '➡️'], 
@@ -337,12 +366,9 @@ const TopicsPage = () => {
             </div>
           )}
 
-          {/* --- FOOD & DRINK TAB --- */}
-          {activeTab === 'Food & Drink' && (
-            <div className="topic-grid grid-cols-3 fade-in w-full" style={{ animationDelay: '0.1s' }}>
-              
+          {level === 'A1' && activeTab === 'Food & Drink' && (
+            <div className="topic-grid grid-cols-3 fade-in w-full" style={{ animationDelay: '0.15s' }}>
               <div className="topic-card">
-                
                 <h2 className="topic-title">🍽️ Essen (Food)</h2>
                 {[
                   ['das Brot', 'bread'], ['das Fleisch', 'meat'], ['der Fisch', 'fish'], 
@@ -366,7 +392,7 @@ const TopicsPage = () => {
               </div>
 
               <div className="topic-card">
-                <h2 className="topic-title">🕰️ Mahlzeiten (Meals & Basics)</h2>
+                <h2 className="topic-title">🕰️ Mahlzeiten (Meals)</h2>
                 {[
                   ['das Frühstück', 'breakfast'], ['das Mittagessen', 'lunch'], 
                   ['das Abendessen', 'dinner'], ['das Salz', 'salt'], 
@@ -377,7 +403,170 @@ const TopicsPage = () => {
                   <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted text-right max-w-[50%]">{eng}</span></div>
                 ))}
               </div>
+            </div>
+          )}
 
+          {/* ========================================= A2 CONTENT ========================================= */}
+          {level === 'A2' && activeTab === 'Work & Tech' && (
+            <div className="topic-grid fade-in w-full" style={{ animationDelay: '0.15s' }}>
+              <div className="topic-card">
+                <h2 className="topic-title" style={{ color: dm ? '#60a5fa' : '#2563eb' }}>💻 Technologie</h2>
+                {[
+                  ['der Bildschirm', 'monitor / screen'], ['die Tastatur', 'keyboard'], 
+                  ['der Laptop', 'laptop'], ['das Netzwerk', 'network'], 
+                  ['die Daten (pl)', 'data'], ['die Software', 'software'],
+                  ['das Passwort', 'password'], ['herunterladen', 'to download']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted">{eng}</span></div>
+                ))}
+              </div>
+              <div className="topic-card">
+                <h2 className="topic-title" style={{ color: dm ? '#f59e0b' : '#d97706' }}>🏢 Im Büro</h2>
+                {[
+                  ['das Büro', 'office'], ['der Kollege / die Kollegin', 'colleague'], 
+                  ['der Termin', 'appointment'], ['die Besprechung', 'meeting'], 
+                  ['der Feierabend', 'end of workday'], ['die Abteilung', 'department'],
+                  ['der Vertrag', 'contract'], ['kündigen', 'to resign / quit']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted">{eng}</span></div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {level === 'A2' && activeTab === 'Health & Body' && (
+            <div className="topic-grid grid-cols-3 fade-in w-full" style={{ animationDelay: '0.15s' }}>
+              <div className="topic-card">
+                <h2 className="topic-title">Der Körper (Body)</h2>
+                {[
+                  ['der Kopf', 'head'], ['der Bauch', 'stomach'], 
+                  ['der Rücken', 'back'], ['der Arm', 'arm'], 
+                  ['das Bein', 'leg'], ['der Fuß', 'foot']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted">{eng}</span></div>
+                ))}
+              </div>
+              <div className="topic-card">
+                <h2 className="topic-title">Gesundheit (Health)</h2>
+                {[
+                  ['die Schmerzen (pl)', 'pain'], ['das Fieber', 'fever'], 
+                  ['die Erkältung', 'cold'], ['der Husten', 'cough'], 
+                  ['die Verletzung', 'injury'], ['die Krankheit', 'illness']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted">{eng}</span></div>
+                ))}
+              </div>
+              <div className="topic-card">
+                <h2 className="topic-title">Medizin (Medical)</h2>
+                {[
+                  ['der Arzt / die Ärztin', 'doctor'], ['die Apotheke', 'pharmacy'], 
+                  ['das Medikament', 'medicine'], ['das Krankenhaus', 'hospital'], 
+                  ['das Pflaster', 'band-aid'], ['die Salbe', 'ointment']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted">{eng}</span></div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {level === 'A2' && activeTab === 'Shopping' && (
+            <div className="topic-card fade-in w-full max-w-3xl" style={{ animationDelay: '0.15s' }}>
+              <h2 className="topic-title" style={{ color: dm ? '#10b981' : '#059669' }}>Einkaufen & Geld (Shopping & Money)</h2>
+              <div className="topic-grid">
+                {[
+                  ['die Kasse', 'cash register'], ['die Quittung', 'receipt'], 
+                  ['das Angebot', 'offer / deal'], ['der Rabatt', 'discount'], 
+                  ['das Bargeld', 'cash'], ['die Kreditkarte', 'credit card'],
+                  ['die Rechnung', 'bill / invoice'], ['die Größe', 'size'],
+                  ['die Umkleidekabine', 'fitting room'], ['das Schaufenster', 'shop window'],
+                  ['anprobieren', 'to try on'], ['ausverkauft', 'sold out']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted">{eng}</span></div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* ========================================= B1 CONTENT ========================================= */}
+          {level === 'B1' && activeTab === 'Media & IT' && (
+            <div className="topic-grid fade-in w-full" style={{ animationDelay: '0.15s' }}>
+              <div className="topic-card">
+                <h2 className="topic-title" style={{ color: dm ? '#c084fc' : '#9333ea' }}>Advanced IT & Data</h2>
+                {[
+                  ['die Künstliche Intelligenz', 'artificial intelligence'], 
+                  ['die Datenanalyse', 'data analysis'], 
+                  ['die Datenbank', 'database'],
+                  ['die Virtuelle Realität', 'virtual reality'], 
+                  ['der Algorithmus', 'algorithm'], 
+                  ['die Cloud-Speicherung', 'cloud storage'],
+                  ['das Programmieren', 'programming'],
+                  ['die Bereitstellung', 'deployment']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted text-right max-w-[50%]">{eng}</span></div>
+                ))}
+              </div>
+              <div className="topic-card">
+                <h2 className="topic-title" style={{ color: dm ? '#38bdf8' : '#0284c7' }}>Media & Communication</h2>
+                {[
+                  ['die Nachricht', 'message / news'], ['das Netzwerk', 'network'], 
+                  ['die Suchmaschine', 'search engine'], ['herunterladen', 'to download'], 
+                  ['hochladen', 'to upload'], ['der Benutzername', 'username'],
+                  ['die Einstellungen (pl)', 'settings'], ['die Sicherheit', 'security']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted">{eng}</span></div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {level === 'B1' && activeTab === 'Advanced Travel' && (
+            <div className="topic-grid fade-in w-full" style={{ animationDelay: '0.15s' }}>
+              <div className="topic-card">
+                <h2 className="topic-title">Transit & Commuting</h2>
+                {[
+                  ['der Elektroroller', 'electric scooter'], 
+                  ['die Fahrstrecke', 'route / mileage'], 
+                  ['die Batterie', 'battery'], 
+                  ['das Fahrzeug', 'vehicle'], 
+                  ['pendeln', 'to commute'], 
+                  ['die Verbindung', 'connection (transit)'],
+                  ['der Fahrplan', 'schedule']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted">{eng}</span></div>
+                ))}
+              </div>
+              <div className="topic-card">
+                <h2 className="topic-title">Long-distance & Solo Travel</h2>
+                {[
+                  ['allein reisen', 'to travel solo'], 
+                  ['die Unterkunft', 'accommodation'], 
+                  ['die Fernreise', 'long-distance trip'], 
+                  ['sich erholen', 'to relax / recover'], 
+                  ['die Sehenswürdigkeit', 'tourist attraction'], 
+                  ['das Gepäck', 'luggage'],
+                  ['der Reisepass', 'passport']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted">{eng}</span></div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {level === 'B1' && activeTab === 'Environment & Society' && (
+            <div className="topic-card fade-in w-full max-w-3xl" style={{ animationDelay: '0.15s' }}>
+              <h2 className="topic-title" style={{ color: dm ? '#10b981' : '#059669' }}>Umwelt & Gesellschaft (Environment & Society)</h2>
+              <div className="topic-grid">
+                {[
+                  ['die Umwelt', 'environment'], ['der Klimawandel', 'climate change'], 
+                  ['der Müll', 'trash / garbage'], ['recyceln', 'to recycle'], 
+                  ['die Wirtschaft', 'economy'], ['die Gesellschaft', 'society'],
+                  ['die Ausbildung', 'education / training'], ['die Regierung', 'government'],
+                  ['das Gesetz', 'law'], ['die Gerechtigkeit', 'justice'],
+                  ['der Umweltschutz', 'environmental protection'], ['erneuerbare Energien', 'renewable energies']
+                ].map(([ger, eng]) => (
+                  <div key={ger} className="topic-item"><b>{ger}</b><span className="text-muted">{eng}</span></div>
+                ))}
+              </div>
             </div>
           )}
 
