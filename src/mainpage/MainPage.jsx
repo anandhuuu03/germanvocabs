@@ -3,7 +3,10 @@ import Flashcard from '../Flashcard';
 import vocabData from '../vocab.json';
 import { Link } from 'react-router-dom';
 
+const LEVELS = ['A1', 'A2', 'B1'];
+
 const MainPage = () => {
+  const [level, setLevel] = useState('A1');
   const [chapter, setChapter] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [filteredWords, setFilteredWords] = useState([]);
@@ -16,13 +19,28 @@ const MainPage = () => {
     setMounted(true);
   }, []);
 
+  // Chapters available for the currently selected level (some levels may have fewer than 12)
+  const chaptersForLevel = React.useMemo(() => {
+    const nums = new Set(
+      vocabData.filter(w => w.level === level).map(w => w.lektion)
+    );
+    return Array.from(nums).sort((a, b) => a - b);
+  }, [level]);
+
+  // If the selected chapter doesn't exist in the newly selected level, snap to the first available one
   useEffect(() => {
-    let words = vocabData.filter(word => word.lektion === chapter);
+    if (chaptersForLevel.length > 0 && !chaptersForLevel.includes(chapter)) {
+      setChapter(chaptersForLevel[0]);
+    }
+  }, [level, chaptersForLevel, chapter]);
+
+  useEffect(() => {
+    let words = vocabData.filter(word => word.level === level && word.lektion === chapter);
     if (category === 'Nouns') words = words.filter(w => w.artikel !== '');
     else if (category === 'Verbs/Others') words = words.filter(w => w.artikel === '');
     setFilteredWords(words);
     setCurrentIndex(0);
-  }, [chapter, category]);
+  }, [level, chapter, category]);
 
   const nextWord = () => currentIndex < filteredWords.length - 1 && setCurrentIndex(currentIndex + 1);
   const prevWord = () => currentIndex > 0 && setCurrentIndex(currentIndex - 1);
@@ -143,6 +161,33 @@ const MainPage = () => {
         .dark .nav-link { border-color: #2e2e2e; color: #ccc; background: #1a1a1a; }
         .dark .nav-link:hover { background: #f0ebe0; color: #0f0f0f; border-color: #f0ebe0; }
         .nav-link.dim { opacity: 0.35; cursor: default; pointer-events: none; }
+
+        /* Level pills (A1 / A2 / B1) */
+        .level-row {
+          display: flex;
+          gap: 0.5rem;
+          width: 100%;
+          margin-bottom: 0.85rem;
+        }
+        .level-btn {
+          flex: 1;
+          padding: 0.55rem 0.5rem;
+          border-radius: 10px;
+          font-family: 'Playfair Display', serif;
+          font-size: 0.95rem;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          border: 1.5px solid transparent;
+          cursor: pointer;
+          transition: all 0.2s ease;
+          text-align: center;
+        }
+        .light .level-btn { background: white; color: #888; border-color: #e0d8cc; }
+        .light .level-btn:hover { border-color: #aaa; color: #1a1a1a; }
+        .light .level-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
+        .dark .level-btn { background: #1e1e1e; color: #777; border-color: #2e2e2e; }
+        .dark .level-btn:hover { border-color: #555; color: #f0ebe0; }
+        .dark .level-btn.active { background: #2563eb; color: white; border-color: #2563eb; }
 
         /* Chapter pills */
         .chapter-row {
@@ -362,7 +407,7 @@ const MainPage = () => {
           <div className="header fade-in">
             <div className="header-title">
               <span>Einfach gut!</span>
-              Deutsch A1
+              Deutsch
             </div>
             <button className="dark-toggle" onClick={() => setDarkMode(!dm)} title="Toggle theme">
               {dm ? '☀️' : '🌙'}
@@ -379,9 +424,22 @@ const MainPage = () => {
             <span className="nav-link dim">Tests 📝</span>
           </div>
 
+          {/* Level Row (A1 / A2 / B1) */}
+          <div className="level-row fade-in">
+            {LEVELS.map(lvl => (
+              <button
+                key={lvl}
+                onClick={() => setLevel(lvl)}
+                className={`level-btn ${level === lvl ? 'active' : ''}`}
+              >
+                {lvl}
+              </button>
+            ))}
+          </div>
+
           {/* Chapter Row */}
           <div className="chapter-row fade-in">
-            {[1,2,3,4,5,6,7,8,9,10,11,12].map(num => (
+            {chaptersForLevel.map(num => (
               <button
                 key={num}
                 onClick={() => setChapter(num)}
@@ -429,7 +487,7 @@ const MainPage = () => {
           </div>
 
           {/* Counter */}
-          <p className="counter fade-in">{currentIndex + 1} / {filteredWords.length}</p>
+          <p className="counter fade-in">{level} · Lektion {chapter} · {currentIndex + 1} / {filteredWords.length}</p>
 
           {/* Flashcard */}
           <div style={{width: '100%', maxWidth: 340, zIndex: 0}} className="fade-in">
