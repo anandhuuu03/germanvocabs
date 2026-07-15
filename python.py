@@ -4,7 +4,7 @@ import re
 import os
 
 # Paths for the new PDF and the existing JSON
-pdf_path = "Einfach_gut_A1.2_Wortschatzliste_Englisch.pdf"
+pdf_path = "Einfach_gut_B1.2_Wortschatzliste_Englisch.pdf"
 output_path = "vocab.json"
 
 # 1. Load existing data if the file exists, otherwise start with an empty list
