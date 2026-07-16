@@ -418,7 +418,7 @@ const MainPage = () => {
           <div className="nav-links fade-in">
             <Link to="/basics"   className="nav-link">Basics 🎒</Link>
             <Link to="/grammar"  className="nav-link">Grammar 📖</Link>
-            {/* <Link to="/chapters" className="nav-link">Chapters 📚</Link> */}
+            <Link to="/chapters" className="nav-link">Chapters 📚</Link>
             <Link to="/topics"   className="nav-link">Topics 🌍</Link>
             <span className="nav-link dim">Practice 🎯</span>
             <span className="nav-link dim">Tests 📝</span>
