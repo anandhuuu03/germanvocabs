@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -50,7 +50,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Welches berühmte Wahrzeichen siehst du hier?',
-    img: 'src/assets/Brandenburger.jpg', // PLACEHOLDER
+    img: 'public/images/Brandenburger.jpg',
     layout: 'landmark',
     options: ['Brandenburger Tor', 'Kölner Dom', 'Schloss Neuschwanstein', 'Reichstagsgebäude'],
     correct: 0,
@@ -67,7 +67,7 @@ const QUESTIONS = [
   {
     cat: 'Geschichte',
     q: 'Wann ist der „Tag der Deutschen Einheit"?',
-    img: 'src/assets/unity.jpg', // PLACEHOLDER
+    img: 'public/images/unity.jpg', 
     layout: 'standard',
     options: ['1. Mai', '3. Oktober', '25. Dezember', '9. November'],
     correct: 1,
@@ -76,7 +76,7 @@ const QUESTIONS = [
   {
     cat: 'Essen',
     q: 'Wie heißt dieses traditionelle Getränk auf Deutsch?',
-    img: 'src/assets/beer.jpg', // PLACEHOLDER
+    img: 'public/images/beer.jpg', 
     layout: 'food',
     options: ['der Wein', 'das Bier', 'der Saft', 'die Milch'],
     correct: 1,
@@ -93,7 +93,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Welches märchenhafte Schloss steht in Bayern?',
-    img: 'src/assets/castle.jpg', // PLACEHOLDER
+    img: 'public/images/castle.jpg', 
     layout: 'landscape',
     options: ['Schloss Sanssouci', 'Schloss Neuschwanstein', 'Wartburg', 'Heidelberger Schloss'],
     correct: 1,
@@ -110,7 +110,7 @@ const QUESTIONS = [
   {
     cat: 'Essen',
     q: 'Was ist der deutsche Name für dieses Gebäck?',
-    img: 'src/assets/pretzel.jpg', // PLACEHOLDER
+    img: 'public/images/pretzel.jpg', 
     layout: 'food',
     options: ['das Brot', 'die Brezel', 'der Kuchen', 'das Brötchen'],
     correct: 1,
@@ -119,7 +119,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Welcher berühmte Fluss fließt an dieser Kathedrale (Kölner Dom) vorbei?',
-    img: 'src/assets/cathederal.jpg', // PLACEHOLDER
+    img: 'public/images/cathederal.jpg', 
     layout: 'landmark',
     options: ['die Donau', 'die Elbe', 'der Rhein', 'die Isar'],
     correct: 2,
@@ -136,7 +136,7 @@ const QUESTIONS = [
   {
     cat: 'Geschichte',
     q: 'Wer ist dieser in Ulm geborene berühmte Wissenschaftler?',
-    img: 'src/assets/albert.jpg', // PLACEHOLDER
+    img: 'public/images/albert.jpg', 
     layout: 'person',
     options: ['Albert Einstein', 'Isaac Newton', 'Nikola Tesla', 'Marie Curie'],
     correct: 0,
@@ -153,7 +153,7 @@ const QUESTIONS = [
   {
     cat: 'Wortschatz',
     q: 'Wie heißt dieses Fahrzeug auf Deutsch?',
-    img: 'src/assets/cycle.jpg', // PLACEHOLDER
+    img: 'public/images/cycle.jpg', 
     layout: 'landscape',
     options: ['das Auto', 'der Bus', 'das Fahrrad', 'der Zug'],
     correct: 2,
@@ -162,7 +162,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Was repräsentieren die Farben der deutschen Flagge?',
-    img: 'src/assets/flag.jpg', // PLACEHOLDER
+    img: 'public/images/flag.jpg', 
     layout: 'flag',
     options: ['Frieden, Natur, Sonne', 'Aus der Dunkelheit, durch Blut, ans Licht', 'Macht, Liebe, Reichtum', 'Norden, Mitte, Süden'],
     correct: 1,
@@ -195,7 +195,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Wie heißt dieses berühmte Winterfest auf Deutsch?',
-    img: 'src/assets/market.jpg', // PLACEHOLDER
+    img: 'public/images/market.jpg', 
     layout: 'landscape',
     options: ['Ostern', 'Der Weihnachtsmarkt', 'Silvester', 'Karneval'],
     correct: 1,
@@ -212,7 +212,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Auf welchem Straßensystem gibt es auf vielen Abschnitten kein Tempolimit?',
-    img: 'src/assets/autobahn.jpg', // PLACEHOLDER
+    img: 'public/images/autobahn.jpg', 
     layout: 'landscape',
     options: ['Die Bundesstraße', 'Die Landstraße', 'Die Autobahn', 'Die Spielstraße'],
     correct: 2,
@@ -239,10 +239,16 @@ const getCityForIndex = (index) => {
 const QuestionImage = ({ src, alt, darkMode, layout }) => {
   const [loaded, setLoaded] = useState(false);
   const [error, setError] = useState(false);
+  const imgRef = useRef(null);
 
   useEffect(() => {
     setLoaded(false);
     setError(false);
+    
+    // FIX: Check if the image is already cached and complete
+    if (imgRef.current && imgRef.current.complete) {
+      setLoaded(true);
+    }
   }, [src]);
 
   let layoutClass = 'qz-image-wrap';
@@ -257,6 +263,7 @@ const QuestionImage = ({ src, alt, darkMode, layout }) => {
         <div className={`qz-skeleton ${darkMode ? 'dark' : 'light'}`}></div>
       )}
       <img
+        ref={imgRef}
         src={error ? FALLBACK_IMAGE : src}
         alt={alt}
         className={`qz-image ${loaded || error ? 'visible' : 'hidden'}`}
