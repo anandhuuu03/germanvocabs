@@ -50,7 +50,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Welches berühmte Wahrzeichen siehst du hier?',
-    img: 'images/Brandenburger.jpg',
+    img: '/images/Brandenburger.jpg',
     layout: 'landmark',
     options: ['Brandenburger Tor', 'Kölner Dom', 'Schloss Neuschwanstein', 'Reichstagsgebäude'],
     correct: 0,
