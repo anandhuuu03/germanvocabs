@@ -279,21 +279,25 @@ const QuestionImage = ({ src, alt, darkMode, layout }) => {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const QuizPage = () => {
+  // Phases: 'loading' | 'welcome' | 'quiz' | 'completion' | 'results'
   const [phase, setPhase] = useState('loading');
   const [current, setCurrent] = useState(0);
   const [darkMode, setDarkMode] = useState(false);
   
+  // Animation & Transition Overlay States
   const [isAnimating, setIsAnimating] = useState(false);
   const [animClass, setAnimClass] = useState('in-right');
-  const [transitionType, setTransitionType] = useState(null);
+  const [transitionType, setTransitionType] = useState(null); // 'fact' | 'city' | null
   const [pendingNext, setPendingNext] = useState(0);
   const [factIndex, setFactIndex] = useState(0);
 
+  // Initialization
   useEffect(() => {
     const timer = setTimeout(() => setPhase('welcome'), 1200);
     return () => clearTimeout(timer);
   }, []);
 
+  // Image Preloader
   useEffect(() => {
     if (current < TOTAL - 1) {
       const nextImg = QUESTIONS[current + 1]?.img;
@@ -309,6 +313,8 @@ const QuizPage = () => {
   const currentCity = getCityForIndex(current);
   const dm = darkMode;
 
+  // ── TRANSITION LOGIC (Automatic 3-Second Flow) ──
+
   const handleNext = () => {
     if (isAnimating || transitionType) return;
     
@@ -321,6 +327,7 @@ const QuizPage = () => {
     setIsAnimating(true);
     setAnimClass('out-left');
 
+    // Wait for the slide-out animation to finish
     setTimeout(() => {
       const nextCity = getCityForIndex(nextIdx);
       if (currentCity.name !== nextCity.name) {
@@ -331,6 +338,7 @@ const QuizPage = () => {
       }
       setPendingNext(nextIdx);
 
+      // Show the Fact/City overlay for EXACTLY 3 seconds
       setTimeout(() => {
         setTransitionType(null);
         setCurrent(nextIdx);
@@ -374,6 +382,8 @@ const QuizPage = () => {
     setPhase('welcome');
     setAnimClass('in-right');
   };
+
+  // ── RENDER HELPERS ──
 
   const renderPassport = () => {
     const visitedCities = [];
@@ -554,6 +564,7 @@ const QuizPage = () => {
 
                   <h2 className="qz-question">{q.q}</h2>
 
+                  {/* Options are pure display elements */}
                   <div className="qz-options">
                     {q.options.map((opt, i) => (
                       <div key={i} className="qz-option">
@@ -780,6 +791,100 @@ const QuizPage = () => {
         .res-outro p { font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem; }
 
         @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ───────────────────────────────────────────────────────── */
+        /* LARGE SCREEN / SMART TV OPTIMIZATIONS                     */
+        /* ───────────────────────────────────────────────────────── */
+        @media (min-width: 1024px) {
+          .qz-content { max-width: 1200px; padding-top: 4rem; }
+          
+          .header-title { font-size: 3rem; }
+          .header-title span { font-size: 1rem; }
+
+          /* Split Layout for Questions */
+          .qz-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+              "top top"
+              "badge badge"
+              "img q"
+              "img opt";
+            gap: 0 4rem;
+            align-items: center;
+            padding: 3.5rem;
+          }
+          
+          .qz-card-top-border { grid-area: top; }
+          .final-badge, .qz-cat-badge { grid-area: badge; justify-self: center; margin-bottom: 2.5rem; }
+          
+          .qz-image-wrap { grid-area: img; margin: 0; height: 100%; min-height: 350px; }
+          .qz-question { grid-area: q; text-align: left; font-size: 2rem; margin-bottom: 2rem; align-self: end; }
+          .qz-options { grid-area: opt; align-self: start; }
+          .qz-option { font-size: 1.1rem; padding: 1.25rem 1.5rem; }
+
+          /* Centered Layout for Questions without Images */
+          .qz-card:not(:has(.qz-image-wrap)) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+              "top"
+              "badge"
+              "emoji"
+              "q"
+              "opt";
+          }
+          .qz-card:not(:has(.qz-image-wrap)) .qz-question { text-align: center; }
+          .qz-card:not(:has(.qz-image-wrap)) .qz-options { max-width: 600px; margin: 0 auto; width: 100%; }
+
+          /* 2-Column Grid for Results Page */
+          .res-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+          .res-card { margin-bottom: 0; }
+        }
+
+        /* ───────────────────────────────────────────────────────── */
+        /* TOUCHSCREEN & SMARTBOARD OPTIMIZATIONS                    */
+        /* ───────────────────────────────────────────────────────── */
+        @media (pointer: coarse) {
+          /* Prevent accidental text highlighting while tapping */
+          .qz-root {
+            user-select: none;
+            -webkit-user-select: none;
+          }
+          
+          /* Allow text selection inside the fact box */
+          .t-fact {
+            user-select: text;
+            -webkit-user-select: text;
+          }
+
+          /* Make navigation buttons massive and easy to hit on a big board */
+          .qz-nav {
+            margin-top: 3rem;
+            gap: 1.5rem;
+          }
+          .qz-nav-btn {
+            padding: 1.5rem;
+            font-size: 1.25rem;
+            border-radius: 20px;
+          }
+
+          /* Make the navigation dots much larger for fat-finger tapping */
+          .qz-nav-dots {
+            gap: 1rem;
+            margin-top: 3rem;
+          }
+          .qz-nav-num {
+            width: 46px;
+            height: 46px;
+            font-size: 1.1rem;
+          }
+          
+          /* Make the theme toggle easy to hit */
+          .dark-toggle {
+            font-size: 1.8rem;
+            padding: 0.8rem;
+          }
+        }
       `}</style>
 
       <div className={`qz-root ${dm ? 'dark' : 'light'}`}>
