@@ -167,14 +167,14 @@ const QUESTIONS = [
     options: ['Einheit, Freiheit und Demokratie', 'Frieden, Natur und Sonne', 'Macht, Liebe und Reichtum', 'Norden, Mitte und Süden'],
     correct: 0,
     note: 'Schwarz-Rot-Gold steht offiziell für Einheit, Recht und Freiheit — Werte der deutschen Demokratie.',
-},
+  },
   {
     cat: 'Grammatik',
-    q: '„Ich mag ___ Kaffee ___ Tee." (sowohl ...)',
+    q: '„Ich habe heute Lust auf beides – ich mag ___ Kaffee ___ Tee." Welches Wortpaar passt?',
     options: ['entweder … oder', 'weder … noch', 'sowohl … als auch', 'zwar … aber'],
     layout: 'standard',
     correct: 2,
-    note: '„sowohl … als auch" betont, dass BEIDES gilt — keine Wahl nötig.',
+    note: '„beides" im Satz zeigt eindeutig: BEIDE Getränke gefallen — daher „sowohl … als auch".',
   },
   {
     cat: 'Essen',
