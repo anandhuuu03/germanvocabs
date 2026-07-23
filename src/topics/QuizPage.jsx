@@ -50,7 +50,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Welches berühmte Wahrzeichen siehst du hier?',
-    img: 'public/images/Brandenburger.jpg',
+    img: 'images/Brandenburger.jpg',
     layout: 'landmark',
     options: ['Brandenburger Tor', 'Kölner Dom', 'Schloss Neuschwanstein', 'Reichstagsgebäude'],
     correct: 0,
@@ -67,7 +67,7 @@ const QUESTIONS = [
   {
     cat: 'Geschichte',
     q: 'Wann ist der „Tag der Deutschen Einheit"?',
-    img: 'public/images/unity.jpg', 
+    img: '/images/unity.jpg', 
     layout: 'standard',
     options: ['1. Mai', '3. Oktober', '25. Dezember', '9. November'],
     correct: 1,
@@ -76,7 +76,7 @@ const QUESTIONS = [
   {
     cat: 'Essen',
     q: 'Wie heißt dieses traditionelle Getränk auf Deutsch?',
-    img: 'public/images/beer.jpg', 
+    img: '/images/beer.jpg', 
     layout: 'food',
     options: ['der Wein', 'das Bier', 'der Saft', 'die Milch'],
     correct: 1,
@@ -93,7 +93,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Welches märchenhafte Schloss steht in Bayern?',
-    img: 'public/images/castle.jpg', 
+    img: '/images/castle.jpg', 
     layout: 'landscape',
     options: ['Schloss Sanssouci', 'Schloss Neuschwanstein', 'Wartburg', 'Heidelberger Schloss'],
     correct: 1,
@@ -110,7 +110,7 @@ const QUESTIONS = [
   {
     cat: 'Essen',
     q: 'Was ist der deutsche Name für dieses Gebäck?',
-    img: 'public/images/pretzel.jpg', 
+    img: '/images/pretzel.jpg', 
     layout: 'food',
     options: ['das Brot', 'die Brezel', 'der Kuchen', 'das Brötchen'],
     correct: 1,
@@ -119,7 +119,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Welcher berühmte Fluss fließt an dieser Kathedrale (Kölner Dom) vorbei?',
-    img: 'public/images/cathederal.jpg', 
+    img: '/images/cathederal.jpg', 
     layout: 'landmark',
     options: ['die Donau', 'die Elbe', 'der Rhein', 'die Isar'],
     correct: 2,
@@ -136,7 +136,7 @@ const QUESTIONS = [
   {
     cat: 'Geschichte',
     q: 'Wer ist dieser in Ulm geborene berühmte Wissenschaftler?',
-    img: 'public/images/albert.jpg', 
+    img: '/images/albert.jpg', 
     layout: 'person',
     options: ['Albert Einstein', 'Isaac Newton', 'Nikola Tesla', 'Marie Curie'],
     correct: 0,
@@ -153,7 +153,7 @@ const QUESTIONS = [
   {
     cat: 'Wortschatz',
     q: 'Wie heißt dieses Fahrzeug auf Deutsch?',
-    img: 'public/images/cycle.jpg', 
+    img: '/images/cycle.jpg', 
     layout: 'landscape',
     options: ['das Auto', 'der Bus', 'das Fahrrad', 'der Zug'],
     correct: 2,
@@ -162,7 +162,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Was repräsentieren die Farben der deutschen Flagge?',
-    img: 'public/images/flag.jpg', 
+    img: '/images/flag.jpg', 
     layout: 'flag',
     options: ['Frieden, Natur, Sonne', 'Aus der Dunkelheit, durch Blut, ans Licht', 'Macht, Liebe, Reichtum', 'Norden, Mitte, Süden'],
     correct: 1,
@@ -195,7 +195,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Wie heißt dieses berühmte Winterfest auf Deutsch?',
-    img: 'public/images/market.jpg', 
+    img: '/images/market.jpg', 
     layout: 'landscape',
     options: ['Ostern', 'Der Weihnachtsmarkt', 'Silvester', 'Karneval'],
     correct: 1,
@@ -212,7 +212,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Auf welchem Straßensystem gibt es auf vielen Abschnitten kein Tempolimit?',
-    img: 'public/images/autobahn.jpg', 
+    img: '/images/autobahn.jpg', 
     layout: 'landscape',
     options: ['Die Bundesstraße', 'Die Landstraße', 'Die Autobahn', 'Die Spielstraße'],
     correct: 2,
@@ -245,7 +245,6 @@ const QuestionImage = ({ src, alt, darkMode, layout }) => {
     setLoaded(false);
     setError(false);
     
-    // FIX: Check if the image is already cached and complete
     if (imgRef.current && imgRef.current.complete) {
       setLoaded(true);
     }
@@ -280,25 +279,21 @@ const QuestionImage = ({ src, alt, darkMode, layout }) => {
 // ─────────────────────────────────────────────────────────────────────────────
 
 const QuizPage = () => {
-  // Phases: 'loading' | 'welcome' | 'quiz' | 'completion' | 'results'
   const [phase, setPhase] = useState('loading');
   const [current, setCurrent] = useState(0);
   const [darkMode, setDarkMode] = useState(false);
   
-  // Animation & Transition Overlay States
   const [isAnimating, setIsAnimating] = useState(false);
   const [animClass, setAnimClass] = useState('in-right');
-  const [transitionType, setTransitionType] = useState(null); // 'fact' | 'city' | null
+  const [transitionType, setTransitionType] = useState(null);
   const [pendingNext, setPendingNext] = useState(0);
   const [factIndex, setFactIndex] = useState(0);
 
-  // Initialization
   useEffect(() => {
     const timer = setTimeout(() => setPhase('welcome'), 1200);
     return () => clearTimeout(timer);
   }, []);
 
-  // Image Preloader
   useEffect(() => {
     if (current < TOTAL - 1) {
       const nextImg = QUESTIONS[current + 1]?.img;
@@ -314,8 +309,6 @@ const QuizPage = () => {
   const currentCity = getCityForIndex(current);
   const dm = darkMode;
 
-  // ── TRANSITION LOGIC (Automatic 3-Second Flow) ──
-
   const handleNext = () => {
     if (isAnimating || transitionType) return;
     
@@ -328,7 +321,6 @@ const QuizPage = () => {
     setIsAnimating(true);
     setAnimClass('out-left');
 
-    // Wait for the slide-out animation to finish
     setTimeout(() => {
       const nextCity = getCityForIndex(nextIdx);
       if (currentCity.name !== nextCity.name) {
@@ -339,13 +331,12 @@ const QuizPage = () => {
       }
       setPendingNext(nextIdx);
 
-      // Show the Fact/City overlay for EXACTLY 3 seconds
       setTimeout(() => {
         setTransitionType(null);
         setCurrent(nextIdx);
         setAnimClass('in-right');
         
-        setTimeout(() => setIsAnimating(false), 400); // clear animating flag after slide-in
+        setTimeout(() => setIsAnimating(false), 400);
       }, 3000);
 
     }, 300);
@@ -383,8 +374,6 @@ const QuizPage = () => {
     setPhase('welcome');
     setAnimClass('in-right');
   };
-
-  // ── RENDER HELPERS ──
 
   const renderPassport = () => {
     const visitedCities = [];
@@ -565,7 +554,6 @@ const QuizPage = () => {
 
                   <h2 className="qz-question">{q.q}</h2>
 
-                  {/* Options are pure display elements */}
                   <div className="qz-options">
                     {q.options.map((opt, i) => (
                       <div key={i} className="qz-option">
@@ -599,7 +587,7 @@ const QuizPage = () => {
               })}
             </div>
 
-            {/* Original Bottom Navigation Bar */}
+            {/* Bottom Navigation Bar */}
             <div className="qz-nav">
               <button onClick={handlePrev} disabled={current === 0 || isAnimating || transitionType} className="qz-nav-btn secondary">
                 ← Zurück
