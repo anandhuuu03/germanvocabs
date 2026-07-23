@@ -49,12 +49,12 @@ const FACTS = [
 const QUESTIONS = [
   {
     cat: 'Kultur',
-    q: 'Was ist die Hauptstadt von Deutschland?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Brandenburger_Tor_abends.jpg/800px-Brandenburger_Tor_abends.jpg',
+    q: 'Welches berühmte Wahrzeichen siehst du hier?',
+    img: 'src/assets/Brandenburger.jpg', // PLACEHOLDER
     layout: 'landmark',
-    options: ['München', 'Berlin', 'Hamburg', 'Frankfurt'],
-    correct: 1,
-    note: 'Berlin ist seit 1990 wieder die Hauptstadt des vereinten Deutschlands.',
+    options: ['Brandenburger Tor', 'Kölner Dom', 'Schloss Neuschwanstein', 'Reichstagsgebäude'],
+    correct: 0,
+    note: 'Das Brandenburger Tor in Berlin ist ein weltbekanntes Symbol der Deutschen Einheit.',
   },
   {
     cat: 'Grammatik',
@@ -67,7 +67,7 @@ const QUESTIONS = [
   {
     cat: 'Geschichte',
     q: 'Wann ist der „Tag der Deutschen Einheit"?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Deutsches_Eck_Koblenz_2020.jpg/800px-Deutsches_Eck_Koblenz_2020.jpg',
+    img: 'src/assets/unity.jpg', // PLACEHOLDER
     layout: 'standard',
     options: ['1. Mai', '3. Oktober', '25. Dezember', '9. November'],
     correct: 1,
@@ -76,7 +76,7 @@ const QUESTIONS = [
   {
     cat: 'Essen',
     q: 'Wie heißt dieses traditionelle Getränk auf Deutsch?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Helles_im_Glas.jpg/800px-Helles_im_Glas.jpg',
+    img: 'src/assets/beer.jpg', // PLACEHOLDER
     layout: 'food',
     options: ['der Wein', 'das Bier', 'der Saft', 'die Milch'],
     correct: 1,
@@ -92,12 +92,12 @@ const QUESTIONS = [
   },
   {
     cat: 'Kultur',
-    q: 'In welcher Stadt findet das berühmte Oktoberfest statt?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Oktoberfest_2012_-_Hofbr%C3%A4u_Festzelt.jpg/800px-Oktoberfest_2012_-_Hofbr%C3%A4u_Festzelt.jpg',
+    q: 'Welches märchenhafte Schloss steht in Bayern?',
+    img: 'src/assets/castle.jpg', // PLACEHOLDER
     layout: 'landscape',
-    options: ['Köln', 'München', 'Stuttgart', 'Dresden'],
+    options: ['Schloss Sanssouci', 'Schloss Neuschwanstein', 'Wartburg', 'Heidelberger Schloss'],
     correct: 1,
-    note: 'Das Oktoberfest findet seit 1810 jährlich in München auf der Theresienwiese statt.',
+    note: 'Schloss Neuschwanstein wurde von König Ludwig II. erbaut und inspirierte das Disney-Schloss.',
   },
   {
     cat: 'Grammatik',
@@ -110,7 +110,7 @@ const QUESTIONS = [
   {
     cat: 'Essen',
     q: 'Was ist der deutsche Name für dieses Gebäck?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Brezl.jpg/800px-Brezl.jpg',
+    img: 'src/assets/pretzel.jpg', // PLACEHOLDER
     layout: 'food',
     options: ['das Brot', 'die Brezel', 'der Kuchen', 'das Brötchen'],
     correct: 1,
@@ -119,7 +119,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Welcher berühmte Fluss fließt an dieser Kathedrale (Kölner Dom) vorbei?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Hohenzollernbr%C3%BCcke_K%C3%B6ln.jpg/800px-Hohenzollernbr%C3%BCcke_K%C3%B6ln.jpg',
+    img: 'src/assets/cathederal.jpg', // PLACEHOLDER
     layout: 'landmark',
     options: ['die Donau', 'die Elbe', 'der Rhein', 'die Isar'],
     correct: 2,
@@ -136,7 +136,7 @@ const QUESTIONS = [
   {
     cat: 'Geschichte',
     q: 'Wer ist dieser in Ulm geborene berühmte Wissenschaftler?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/800px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg',
+    img: 'src/assets/albert.jpg', // PLACEHOLDER
     layout: 'person',
     options: ['Albert Einstein', 'Isaac Newton', 'Nikola Tesla', 'Marie Curie'],
     correct: 0,
@@ -153,7 +153,7 @@ const QUESTIONS = [
   {
     cat: 'Wortschatz',
     q: 'Wie heißt dieses Fahrzeug auf Deutsch?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/M%C3%BCnster_Bicycles.jpg/800px-M%C3%BCnster_Bicycles.jpg',
+    img: 'src/assets/cycle.jpg', // PLACEHOLDER
     layout: 'landscape',
     options: ['das Auto', 'der Bus', 'das Fahrrad', 'der Zug'],
     correct: 2,
@@ -162,7 +162,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Was repräsentieren die Farben der deutschen Flagge?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/800px-Flag_of_Germany.svg.png',
+    img: 'src/assets/flag.jpg', // PLACEHOLDER
     layout: 'flag',
     options: ['Frieden, Natur, Sonne', 'Aus der Dunkelheit, durch Blut, ans Licht', 'Macht, Liebe, Reichtum', 'Norden, Mitte, Süden'],
     correct: 1,
@@ -195,7 +195,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Wie heißt dieses berühmte Winterfest auf Deutsch?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/N%C3%BCrnberger_Christkindlesmarkt_2016.jpg/800px-N%C3%BCrnberger_Christkindlesmarkt_2016.jpg',
+    img: 'src/assets/market.jpg', // PLACEHOLDER
     layout: 'landscape',
     options: ['Ostern', 'Der Weihnachtsmarkt', 'Silvester', 'Karneval'],
     correct: 1,
@@ -212,7 +212,7 @@ const QUESTIONS = [
   {
     cat: 'Kultur',
     q: 'Auf welchem Straßensystem gibt es auf vielen Abschnitten kein Tempolimit?',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Autobahn_A8_Stuttgart.jpg/800px-Autobahn_A8_Stuttgart.jpg',
+    img: 'src/assets/autobahn.jpg', // PLACEHOLDER
     layout: 'landscape',
     options: ['Die Bundesstraße', 'Die Landstraße', 'Die Autobahn', 'Die Spielstraße'],
     correct: 2,
