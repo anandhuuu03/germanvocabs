@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const LEVELS = ['A1', 'A2', 'B1'];
+// 1. Updated LEVELS and TABS_BY_LEVEL for B1.1 and B1.2
+const LEVELS = ['A1', 'A2', 'B1.1', 'B1.2'];
 
 const TABS_BY_LEVEL = {
   A1: ['Articles', 'Pronouns', 'Verbs', 'Sentences'],
   A2: ['Connectors', 'Verbs', 'Cases', 'Nouns', 'Prepositions', 'Clauses'],
-  B1: ['Connectors', 'Prepositions', 'Infinitiv & Futur', 'Passiv & Verben', 'Relativsätze'],
+  'B1.1': ['Connectors', 'Prepositions', 'Infinitiv & Futur', 'Passiv & Verben', 'Relativsätze'],
+  'B1.2': ['Temporale Sätze', 'Konjunktiv II', 'Pronomen & Fragen', 'Satzstrukturen', 'Verben'],
 };
 
 const GrammarPage = ({ darkMode = false }) => {
@@ -409,86 +411,87 @@ const GrammarPage = ({ darkMode = false }) => {
       );
     }
 
-    // Sentences
-    return (
-      <div className="gr-fade">
-        <Card title="Akkusativ Präpositionen" color="#3b82f6">
-          <Intro>These prepositions <b>always</b> take Akkusativ — no exceptions:</Intro>
-          <PillGrid color="#3b82f6" items={[['bis', 'until / up to'], ['für', 'for'], ['gegen', 'against / around'], ['um', 'around / at (time)'], ['durch', 'through'], ['ohne', 'without']]} />
-          <Tip>Ich gehe <span className="akk">durch den</span> Park. &nbsp;·&nbsp; Ich kaufe Blumen <span className="akk">für meine</span> Mutter.</Tip>
-        </Card>
+    if (activeTab === 'Sentences') {
+      return (
+        <div className="gr-fade">
+          <Card title="Akkusativ Präpositionen" color="#3b82f6">
+            <Intro>These prepositions <b>always</b> take Akkusativ — no exceptions:</Intro>
+            <PillGrid color="#3b82f6" items={[['bis', 'until / up to'], ['für', 'for'], ['gegen', 'against / around'], ['um', 'around / at (time)'], ['durch', 'through'], ['ohne', 'without']]} />
+            <Tip>Ich gehe <span className="akk">durch den</span> Park. &nbsp;·&nbsp; Ich kaufe Blumen <span className="akk">für meine</span> Mutter.</Tip>
+          </Card>
 
-        <Card title="Dativ Präpositionen" color="#f59e0b">
-          <Intro>These prepositions <b>always</b> take Dativ — no exceptions:</Intro>
-          <PillGrid color="#f59e0b" items={[['aus', 'from / out of'], ['bei', 'at / near'], ['mit', 'with'], ['nach', 'to / after'], ['seit', 'since / for'], ['von', 'from / of'], ['zu', 'to'], ['gegenüber', 'opposite'], ['ab', 'from (time/place)']]} />
-          <Tip>Ich komme <span className="dat">aus dem</span> Haus. &nbsp;·&nbsp; Ich gehe <span className="dat">mit meiner</span> Mutter.</Tip>
-        </Card>
+          <Card title="Dativ Präpositionen" color="#f59e0b">
+            <Intro>These prepositions <b>always</b> take Dativ — no exceptions:</Intro>
+            <PillGrid color="#f59e0b" items={[['aus', 'from / out of'], ['bei', 'at / near'], ['mit', 'with'], ['nach', 'to / after'], ['seit', 'since / for'], ['von', 'from / of'], ['zu', 'to'], ['gegenüber', 'opposite'], ['ab', 'from (time/place)']]} />
+            <Tip>Ich komme <span className="dat">aus dem</span> Haus. &nbsp;·&nbsp; Ich gehe <span className="dat">mit meiner</span> Mutter.</Tip>
+          </Card>
 
-        <Card title="Dativ + Akkusativ im Satz" color="#a855f7">
-          <div className="modal-formula">Subject + Verb + <span className="dat">Dativ (indirect)</span> + <span className="akk">Akkusativ (direct)</span></div>
-          <div className="dat-akk-example" style={{ background: dm ? '#1a1a1a' : '#faf7f2', border: `1px solid ${dm ? '#222' : '#e8e2d6'}` }}>
-            <p style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.4rem' }}>Ich gebe <span className="dat">dem Mann</span> <span className="akk">das Buch</span>.</p>
-            <p style={{ fontSize: '0.78rem', opacity: 0.5, fontStyle: 'italic' }}>I give the man the book.</p>
-            <div className="dat-akk-pills">
-              <span className="dat-akk-pill" style={{ background: 'rgba(245,158,11,0.12)', color: '#f59e0b' }}>dem Mann → Dativ (to whom?)</span>
-              <span className="dat-akk-pill" style={{ background: 'rgba(59,130,246,0.12)', color: '#3b82f6' }}>das Buch → Akkusativ (what?)</span>
+          <Card title="Dativ + Akkusativ im Satz" color="#a855f7">
+            <div className="modal-formula">Subject + Verb + <span className="dat">Dativ (indirect)</span> + <span className="akk">Akkusativ (direct)</span></div>
+            <div className="dat-akk-example" style={{ background: dm ? '#1a1a1a' : '#faf7f2', border: `1px solid ${dm ? '#222' : '#e8e2d6'}` }}>
+              <p style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.4rem' }}>Ich gebe <span className="dat">dem Mann</span> <span className="akk">das Buch</span>.</p>
+              <p style={{ fontSize: '0.78rem', opacity: 0.5, fontStyle: 'italic' }}>I give the man the book.</p>
+              <div className="dat-akk-pills">
+                <span className="dat-akk-pill" style={{ background: 'rgba(245,158,11,0.12)', color: '#f59e0b' }}>dem Mann → Dativ (to whom?)</span>
+                <span className="dat-akk-pill" style={{ background: 'rgba(59,130,246,0.12)', color: '#3b82f6' }}>das Buch → Akkusativ (what?)</span>
+              </div>
             </div>
-          </div>
-          <Tip><b>Rule:</b> When both Dativ and Akkusativ are present, <b>Dativ always comes first</b> (unless the Akkusativ is a pronoun).</Tip>
-        </Card>
+            <Tip><b>Rule:</b> When both Dativ and Akkusativ are present, <b>Dativ always comes first</b> (unless the Akkusativ is a pronoun).</Tip>
+          </Card>
 
-        <Card title="Der Frage-Trick — Identify Cases by Asking" color="#22c55e">
-          <Intro>Not sure which case to use? Ask yourself:</Intro>
-          {[
-            { q: 'Wer?', hint: 'Who? → Subject', cas: 'Nominativ', col: '#888', bg: 'rgba(128,128,128,0.08)' },
-            { q: 'Wen / Was?', hint: 'Whom / What? → Direct Object', cas: 'Akkusativ', col: '#3b82f6', bg: 'rgba(59,130,246,0.08)' },
-            { q: 'Wem / Wo ?', hint: 'To whom / Where? → Indirect Object', cas: 'Dativ', col: '#f59e0b', bg: 'rgba(245,158,11,0.08)' },
-          ].map(item => (
-            <div key={item.q} className="q-trick-row" style={{ background: dm ? '#1a1a1a' : item.bg, border: `1px solid ${dm ? '#222' : 'transparent'}` }}>
-              <span style={{ fontWeight: 800, color: item.col, fontSize: '1rem', minWidth: '90px' }}>{item.q}</span>
-              <span style={{ fontSize: '0.8rem', opacity: 0.55, flex: 1 }}>{item.hint}</span>
-              <span style={{ fontWeight: 700, color: item.col, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{item.cas}</span>
-            </div>
-          ))}
-          <Tip style={{ marginTop: '1.25rem' }}>
-            <b>Example:</b> <i>Ich gebe dem Mann das Buch.</i><br />
-            <span style={{ opacity: 0.7 }}>Wer gibt? → <b>Ich</b> (Nominativ)</span><br />
-            <span style={{ color: '#f59e0b' }}>Wem gebe ich? → <b>dem Mann</b> (Dativ)</span><br />
-            <span style={{ color: '#3b82f6' }}>Was gebe ich? → <b>das Buch</b> (Akkusativ)</span>
-          </Tip>
-        </Card>
-
-        <Card title="W-Fragen — Information Questions" color="#6366f1">
-          <div className="modal-formula" style={{ marginBottom: '1.25rem' }}>
-            <span style={{ color: '#6366f1', fontWeight: 700 }}>Fragewort</span>{' + '}
-            <span style={{ color: '#ef4444', fontWeight: 700, textDecoration: 'underline' }}>Verb</span>{' + Subject + Object?'}
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: '0.6rem', marginBottom: '1.25rem' }}>
-            {[{ w: 'Wer?', t: 'Who?' }, { w: 'Was?', t: 'What?' }, { w: 'Wo?', t: 'Where?' }, { w: 'Woher?', t: 'Where from?' }, { w: 'Wohin?', t: 'Where to?' }, { w: 'Wann?', t: 'When?' }, { w: 'Warum?', t: 'Why?' }, { w: 'Wie?', t: 'How?' }].map(item => (
-              <div key={item.w} style={{ padding: '0.6rem', borderRadius: '12px', textAlign: 'center', background: dm ? 'rgba(99,102,241,0.07)' : 'rgba(99,102,241,0.05)', border: `1px solid ${dm ? 'rgba(99,102,241,0.18)' : 'rgba(99,102,241,0.15)'}` }}>
-                <div style={{ fontWeight: 800, color: '#6366f1', fontSize: '0.95rem' }}>{item.w}</div>
-                <div style={{ fontSize: '0.65rem', opacity: 0.4, textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: '0.15rem' }}>{item.t}</div>
+          <Card title="Der Frage-Trick — Identify Cases by Asking" color="#22c55e">
+            <Intro>Not sure which case to use? Ask yourself:</Intro>
+            {[
+              { q: 'Wer?', hint: 'Who? → Subject', cas: 'Nominativ', col: '#888', bg: 'rgba(128,128,128,0.08)' },
+              { q: 'Wen / Was?', hint: 'Whom / What? → Direct Object', cas: 'Akkusativ', col: '#3b82f6', bg: 'rgba(59,130,246,0.08)' },
+              { q: 'Wem / Wo ?', hint: 'To whom / Where? → Indirect Object', cas: 'Dativ', col: '#f59e0b', bg: 'rgba(245,158,11,0.08)' },
+            ].map(item => (
+              <div key={item.q} className="q-trick-row" style={{ background: dm ? '#1a1a1a' : item.bg, border: `1px solid ${dm ? '#222' : 'transparent'}` }}>
+                <span style={{ fontWeight: 800, color: item.col, fontSize: '1rem', minWidth: '90px' }}>{item.q}</span>
+                <span style={{ fontSize: '0.8rem', opacity: 0.55, flex: 1 }}>{item.hint}</span>
+                <span style={{ fontWeight: 700, color: item.col, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>{item.cas}</span>
               </div>
             ))}
-          </div>
-          <Tip>Example: <b>Woher</b> <span style={{ color: '#ef4444', fontWeight: 700 }}>kommst</span> du?</Tip>
-        </Card>
+            <Tip style={{ marginTop: '1.25rem' }}>
+              <b>Example:</b> <i>Ich gebe dem Mann das Buch.</i><br />
+              <span style={{ opacity: 0.7 }}>Wer gibt? → <b>Ich</b> (Nominativ)</span><br />
+              <span style={{ color: '#f59e0b' }}>Wem gebe ich? → <b>dem Mann</b> (Dativ)</span><br />
+              <span style={{ color: '#3b82f6' }}>Was gebe ich? → <b>das Buch</b> (Akkusativ)</span>
+            </Tip>
+          </Card>
 
-        <Card title="Ja/Nein Fragen — Yes/No Questions" color="#14b8a6">
-          <div className="modal-formula" style={{ marginBottom: '1.25rem' }}>
-            <span style={{ color: '#ef4444', fontWeight: 700, textDecoration: 'underline' }}>Verb (Pos 1)</span>{' + Subject + Object?'}
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-            {[{ q: 'Kommst du aus Indien?', a: 'Ja, ich komme aus Indien. / Nein, ich komme aus Spanien.' }, { q: 'Hast du Zeit?', a: 'Ja, ich habe Zeit.' }].map((item, i) => (
-              <div key={i} style={{ padding: '0.85rem 1rem', borderRadius: '12px', background: dm ? '#1a1a1a' : '#faf7f2', border: `1px solid ${dm ? '#222' : '#e8e2d6'}` }}>
-                <p style={{ fontSize: '0.88rem', fontWeight: 600, marginBottom: '0.4rem' }}><span style={{ color: '#ef4444', fontWeight: 700 }}>{item.q.split(' ')[0]}</span>{' ' + item.q.split(' ').slice(1).join(' ')}</p>
-                <p style={{ fontSize: '0.75rem', color: '#14b8a6', fontWeight: 600 }}>→ {item.a}</p>
-              </div>
-            ))}
-          </div>
-        </Card>
-      </div>
-    );
+          <Card title="W-Fragen — Information Questions" color="#6366f1">
+            <div className="modal-formula" style={{ marginBottom: '1.25rem' }}>
+              <span style={{ color: '#6366f1', fontWeight: 700 }}>Fragewort</span>{' + '}
+              <span style={{ color: '#ef4444', fontWeight: 700, textDecoration: 'underline' }}>Verb</span>{' + Subject + Object?'}
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(110px, 1fr))', gap: '0.6rem', marginBottom: '1.25rem' }}>
+              {[{ w: 'Wer?', t: 'Who?' }, { w: 'Was?', t: 'What?' }, { w: 'Wo?', t: 'Where?' }, { w: 'Woher?', t: 'Where from?' }, { w: 'Wohin?', t: 'Where to?' }, { w: 'Wann?', t: 'When?' }, { w: 'Warum?', t: 'Why?' }, { w: 'Wie?', t: 'How?' }].map(item => (
+                <div key={item.w} style={{ padding: '0.6rem', borderRadius: '12px', textAlign: 'center', background: dm ? 'rgba(99,102,241,0.07)' : 'rgba(99,102,241,0.05)', border: `1px solid ${dm ? 'rgba(99,102,241,0.18)' : 'rgba(99,102,241,0.15)'}` }}>
+                  <div style={{ fontWeight: 800, color: '#6366f1', fontSize: '0.95rem' }}>{item.w}</div>
+                  <div style={{ fontSize: '0.65rem', opacity: 0.4, textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: '0.15rem' }}>{item.t}</div>
+                </div>
+              ))}
+            </div>
+            <Tip>Example: <b>Woher</b> <span style={{ color: '#ef4444', fontWeight: 700 }}>kommst</span> du?</Tip>
+          </Card>
+
+          <Card title="Ja/Nein Fragen — Yes/No Questions" color="#14b8a6">
+            <div className="modal-formula" style={{ marginBottom: '1.25rem' }}>
+              <span style={{ color: '#ef4444', fontWeight: 700, textDecoration: 'underline' }}>Verb (Pos 1)</span>{' + Subject + Object?'}
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              {[{ q: 'Kommst du aus Indien?', a: 'Ja, ich komme aus Indien. / Nein, ich komme aus Spanien.' }, { q: 'Hast du Zeit?', a: 'Ja, ich habe Zeit.' }].map((item, i) => (
+                <div key={i} style={{ padding: '0.85rem 1rem', borderRadius: '12px', background: dm ? '#1a1a1a' : '#faf7f2', border: `1px solid ${dm ? '#222' : '#e8e2d6'}` }}>
+                  <p style={{ fontSize: '0.88rem', fontWeight: 600, marginBottom: '0.4rem' }}><span style={{ color: '#ef4444', fontWeight: 700 }}>{item.q.split(' ')[0]}</span>{' ' + item.q.split(' ').slice(1).join(' ')}</p>
+                  <p style={{ fontSize: '0.75rem', color: '#14b8a6', fontWeight: 600 }}>→ {item.a}</p>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+      );
+    }
   };
 
   // ───────────────────────── A2 CONTENT ─────────────────────────
@@ -497,7 +500,6 @@ const GrammarPage = ({ darkMode = false }) => {
     if (activeTab === 'Connectors') {
       return (
         <div className="gr-fade">
-          {/* [cite: 13, 91, 92, 93] */}
           <Card title="Connector Master Reference" color="#6366f1">
             <Intro>The single most important table in A2. Memorize the verb position column.</Intro>
             <DataTable headers={['Connector', 'Meaning', 'Verb Position', 'Example']} rows={[
@@ -511,11 +513,9 @@ const GrammarPage = ({ darkMode = false }) => {
               ['deshalb', 'therefore', 'Verb immediately after', 'Deshalb lerne ich jeden Tag.'],
               ['trotzdem', 'nevertheless', 'Verb immediately after', 'Trotzdem gehe ich spazieren.'],
             ]} />
-            {/* [cite: 94, 95, 101, 102, 103] */}
             <Tip><b>Golden trick — WDOWD group</b> (Weil, Dass, Obwohl, Wenn, Damit) all send the verb to the end. <i>deshalb</i> &amp; <i>trotzdem</i> → verb comes directly after (Verb-Second). <i>denn</i> → normal word order. <i>um...zu</i> → same subject, zu + Infinitiv at end.</Tip>
           </Card>
 
-          {/* [cite: 14, 15, 16, 21, 28, 29, 34] */}
           <Card title="weil vs. denn vs. dass" color="#3b82f6">
             <SubBlock title="denn (coordinating) — NORMAL word order" color="#3b82f6" structure="Satz 1, denn Satz 2" examples={['Ich bin glücklich, denn ich habe eine neue Stelle.', 'Ich lerne Deutsch, denn ich möchte in Deutschland studieren.']} />
             <SubBlock title="weil (subordinating) — Verb goes to the END" color="#3b82f6" structure="Satz 1, weil ... Verb" examples={['Ich bin glücklich, weil ich eine neue Stelle habe.', 'Ich lerne Deutsch, weil ich in Deutschland studieren möchte.']} />
@@ -523,14 +523,12 @@ const GrammarPage = ({ darkMode = false }) => {
             <Tip>Common starters: <i>Ich denke, dass… · Ich glaube, dass… · Ich finde, dass… · Es ist wichtig, dass… · Es ist schade, dass…</i></Tip>
           </Card>
 
-          {/* [cite: 42, 43, 84, 88] */}
           <Card title="obwohl vs. trotzdem — Contrast" color="#ef4444">
             <SubBlock title="obwohl — one sentence, verb at end" color="#ef4444" structure="Hauptsatz + obwohl + ... Verb (end)" examples={['Ich gehe spazieren, obwohl es regnet.', 'Er arbeitet, obwohl er krank ist.', 'Obwohl ich müde bin, lerne ich Deutsch.']} />
             <SubBlock title="trotzdem — two sentences, Verb-Second after trotzdem" color="#ef4444" structure="Sentence 1. Trotzdem + Verb + Subject ..." examples={['Es regnet. Trotzdem gehe ich spazieren.', 'Er ist müde. Trotzdem arbeitet er.']} />
             <Tip>weil = reason (because) · obwohl = contrast (although), both send the verb to the end within one sentence.</Tip>
           </Card>
 
-          {/* [cite: 52, 53, 60, 61, 62] */}
           <Card title="wenn vs. als — Time Reference" color="#22c55e">
             <DataTable headers={['Word', 'Meaning', 'Time Reference', 'Example']} rows={[
               ['wenn', 'if / whenever', 'Present, future, repeated past', 'Wenn ich Zeit habe, komme ich.'],
@@ -539,7 +537,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Tip><b>Exam trick:</b> wenn = repeated or future. als = single past moment. Verb always goes to the end of the wenn-clause.</Tip>
           </Card>
 
-          {/* [cite: 64, 65, 66, 70, 76] */}
           <Card title="damit vs. um...zu — Purpose" color="#a855f7">
             <Intro>The rule is simple: check the subjects.</Intro>
             <SubBlock title="um...zu — SAME subject in both clauses" color="#a855f7" structure="Main clause + um + ... + zu + Infinitiv" examples={['Ich lerne Deutsch, um in Deutschland zu studieren.', 'Er spart Geld, um ein Auto zu kaufen.']} />
@@ -547,7 +544,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Tip>When the subject is the same, both are technically correct — but A2 teachers prefer um...zu.</Tip>
           </Card>
 
-          {/* [cite: 78, 79, 80, 84] */}
           <Card title="deshalb & trotzdem — Verb-Second Adverbs" color="#14b8a6">
             <SubBlock title="deshalb — 'therefore / that is why'" color="#14b8a6" structure="Sentence 1. Deshalb + Verb + Subject ..." examples={['Ich habe viel gelernt. Deshalb habe ich die Prüfung bestanden.', 'Er ist krank. Deshalb kommt er nicht.']} />
             <SubBlock title="trotzdem — 'nevertheless / still'" color="#14b8a6" structure="Sentence 1. Trotzdem + Verb + Subject ..." examples={['Es regnet. Trotzdem gehe ich spazieren.', 'Er ist müde. Trotzdem arbeitet er.']} />
@@ -559,7 +555,6 @@ const GrammarPage = ({ darkMode = false }) => {
     if (activeTab === 'Verbs') {
       return (
         <div className="gr-fade">
-          {/* [cite: 105, 106, 107, 108, 109, 110, 111, 112] */}
           <Card title="Reflexive Verben" color="#3b82f6">
             <Intro>The action comes back to the person performing it: 'I wash myself.'</Intro>
             <DataTable headers={['Pronomen', 'Reflexivpronomen']} rows={[['ich', 'mich'], ['du', 'dich'], ['er / sie / es', 'sich'], ['wir', 'uns'], ['ihr', 'euch'], ['sie / Sie', 'sich']]} />
@@ -573,11 +568,9 @@ const GrammarPage = ({ darkMode = false }) => {
               ['sich anmelden (für)', 'to register (for)', '—', 'Ich melde mich für den Kurs an.'],
               ['sich beeilen', 'to hurry up', '—', 'Ich beeile mich.'],
             ]} />
-            {/* [cite: 113, 114, 115, 116, 117] */}
             <Tip>The reflexive pronoun stays with its subject even in commands: <i>Beeil dich! (du) · Beeilen Sie sich! (Sie) · Beeilt euch! (ihr)</i></Tip>
           </Card>
 
-          {/* [cite: 119, 120, 121, 122, 123] */}
           <Card title="Modalverb dürfen — 'may / be allowed to'" color="#f59e0b">
             <DataTable headers={['Pronomen', 'dürfen']} rows={[['ich', 'darf'], ['du', 'darfst'], ['er / sie / es', 'darf'], ['wir', 'dürfen'], ['ihr', 'dürft'], ['sie / Sie', 'dürfen']]} />
             <p style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', opacity: 0.4, margin: '1.25rem 0 0.75rem' }}>nicht vs. kein</p>
@@ -587,7 +580,6 @@ const GrammarPage = ({ darkMode = false }) => {
             ]} />
           </Card>
 
-          {/* [cite: 127, 128, 129, 130, 131, 132, 133] */}
           <Card title="Imperativ (Commands)" color="#ef4444">
             <DataTable headers={['Form', 'Rule', 'machen', 'kommen', 'bringen', 'legen']} rows={[
               ['du', "Remove -en, drop final -st", 'Mach!', 'Komm!', 'Bring!', 'Leg!'],
@@ -597,7 +589,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Tip>Reflexive verbs keep the pronoun: <i>Beeil dich! · Beeilt euch! · Beeilen Sie sich!</i> Very common in office contexts: <i>Kommen Sie bitte herein. / Bringen Sie die Unterlagen mit.</i></Tip>
           </Card>
 
-          {/* [cite: 135, 136, 137, 138, 152] */}
           <Card title="Konjunktiv II — Advice, Suggestions & Polite Requests" color="#a855f7">
             <DataTable headers={['Infinitiv', 'Konjunktiv II', 'Use']} rows={[
               ['sollen', 'sollte', "Advice — 'should'"],
@@ -609,11 +600,9 @@ const GrammarPage = ({ darkMode = false }) => {
               ['mögen', 'möchte', 'Polite wish'],
             ]} />
             <Examples items={['Du solltest mehr lernen. → You should study more.', 'Wir könnten nach Bonn fahren. → We could go to Bonn.', 'Könnten Sie mir helfen? → Could you help me?', 'Ich hätte gern einen Kaffee. → I would like a coffee.', 'Für regular verbs: würde + Infinitiv — Ich würde nach Deutschland reisen.']} />
-            {/* [cite: 159] */}
             <Tip><b>sollte vs. könnte:</b> sollte = stronger advice (like a teacher recommending); könnte = softer suggestion, one option among several. Priority forms for A2: sollte, könnte, möchte, hätte, wäre, würde.</Tip>
           </Card>
 
-          {/* [cite: 161, 162, 163, 164, 165, 166] */}
           <Card title="Präteritum der Modalverben — Modal Verbs in the Past" color="#14b8a6">
             <Intro>Only the modal verb changes to Präteritum; the rest of the sentence stays the same.</Intro>
             <DataTable headers={['Infinitiv', 'Present (ich)', 'Präteritum (ich)', 'English']} rows={[
@@ -624,7 +613,6 @@ const GrammarPage = ({ darkMode = false }) => {
               ['dürfen', 'darf', 'durfte', 'was allowed to'],
             ]} />
             <Examples items={['Ich kann Deutsch sprechen. → Ich konnte Deutsch sprechen.', 'Wir müssen arbeiten. → Wir mussten arbeiten.', 'Er will Pilot werden. → Er wollte Pilot werden.', 'Als Kind wollte ich Lehrer werden. / Als Kind durfte ich lange spielen.']} />
-            {/* [cite: 173, 174, 175, 176] */}
             <Tip>haben → hatte, sein → war also follow this pattern: <i>Ich war krank. / Ich hatte keine Zeit.</i> Note: sollte can mean either Präteritum ('was supposed to') or Konjunktiv II ('should') — context decides.</Tip>
           </Card>
         </div>
@@ -634,7 +622,6 @@ const GrammarPage = ({ darkMode = false }) => {
     if (activeTab === 'Cases') {
       return (
         <div className="gr-fade">
-          {/* [cite: 180, 181, 182, 183, 184, 185] */}
           <Card title="Demonstrativpronomen — 'this one / that one'" color="#3b82f6">
             <Intro>Replaces a noun to avoid repetition: <i>Der Pullover ist toll. Ich kaufe den Pullover.</i> → <i>Der Pullover ist toll. Den kaufe ich.</i></Intro>
             <DataTable headers={['Case', 'Maskulin', 'Feminin', 'Neutral', 'Plural']} rows={[
@@ -646,7 +633,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Tip>A2 exam focus is mainly Nom + Akk — only Maskulin changes in Akkusativ (der → den). Dativ example: <i>Der Mann ist nett. Ich helfe dem.</i></Tip>
           </Card>
 
-          {/* [cite: 208, 209, 210, 211, 212, 220, 221, 222] */}
           <Card title="Possessivpronomen im Dativ & Akkusativ" color="#f59e0b">
             <DataTable headers={['Case', 'Maskulin', 'Feminin', 'Neutral', 'Plural']} rows={[
               ['Dativ', 'meinem', 'meiner', 'meinem', 'meinen'],
@@ -656,7 +642,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Examples items={['Ich helfe meinem Chef.', 'Er antwortet seiner Kollegin.', 'Wir schreiben unserem Kunden.', 'Ich nehme meinen Kurs. / Ich kaufe meine Salbe.']} />
           </Card>
 
-          {/* [cite: 227, 228, 229] */}
           <Card title="Indefinitpronomen" color="#22c55e">
             <DataTable headers={['German', 'English', 'Example']} rows={[
               ['jemand', 'someone', 'Jemand wartet draußen.'],
@@ -666,11 +651,9 @@ const GrammarPage = ({ darkMode = false }) => {
               ['alle', 'everyone / all', 'Alle Kinder lernen Deutsch.'],
               ['man', 'one / people / you (general)', 'Man muss viel lernen.'],
             ]} />
-            {/* [cite: 233, 234, 235] */}
             <Tip><i>man</i> is very common for general truths: <i>Man muss pünktlich sein. / Man darf hier nicht rauchen.</i></Tip>
           </Card>
 
-          {/* [cite: 238, 239, 240, 241] */}
           <Card title="Verben mit Dativ" color="#a855f7">
             <Intro>These verbs require Dativ (Wem?), NOT Akkusativ — a frequent exam trap.</Intro>
             <DataTable headers={['Verb', 'English', 'Example']} rows={[
@@ -683,7 +666,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Tip>Memory trick: all these verbs answer <b>Wem?</b> (to/for whom?) — that always signals Dativ.</Tip>
           </Card>
 
-          {/* [cite: 243, 244, 245, 246, 247, 248] */}
           <Card title="Verben mit Dativ AND Akkusativ — Two Objects" color="#14b8a6">
             <div className="modal-formula">Verb + Person (Dativ) + Thing (Akkusativ)</div>
             <DataTable headers={['Verb', 'English', 'Example']} rows={[
@@ -705,7 +687,6 @@ const GrammarPage = ({ darkMode = false }) => {
     if (activeTab === 'Nouns') {
       return (
         <div className="gr-fade">
-          {/* [cite: 251, 252, 253, 254, 255, 256] */}
           <Card title="Adjektivdeklination (Adjective Declension)" color="#3b82f6">
             <Intro>Key insight: only the ADJECTIVE ending changes. The noun itself stays the same.</Intro>
             <p style={{ fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.5rem' }}>1. With Definite Article</p>
@@ -713,7 +694,6 @@ const GrammarPage = ({ darkMode = false }) => {
               ['Nominativ', 'der rote Mantel', 'die rote Jacke', 'das rote Handy', 'die roten Schuhe'],
               ['Akkusativ', 'den roten Mantel', 'die rote Jacke', 'das rote Handy', 'die roten Schuhe'],
             ]} minWidth="620px" />
-            {/* [cite: 258, 259] */}
             <p style={{ fontWeight: 700, fontSize: '0.85rem', margin: '1.25rem 0 0.5rem' }}>2. With Indefinite Article</p>
             <DataTable headers={['Case', 'Maskulin', 'Feminin', 'Neutral']} rows={[
               ['Nominativ', 'ein roter Mantel', 'eine rote Jacke', 'ein rotes Handy'],
@@ -722,7 +702,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Tip><b>Cheat sheet:</b> der-word Nom → der rote / die rote / das rote / die roten. der-word Akk → den roten / die rote / das rote / die roten. ein-word Nom → ein roter / eine rote / ein rotes. ein-word Akk → einen roten / eine rote / ein rotes.</Tip>
           </Card>
 
-          {/* [cite: 265, 266, 267] */}
           <Card title="jeder / jede / jedes — 'every / each'" color="#22c55e">
             <Intro>Declines like a der-word. Only Maskulin Akkusativ changes: jeder → jeden.</Intro>
             <DataTable headers={['Gender', 'Nominativ', 'Akkusativ']} rows={[
@@ -733,7 +712,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Examples items={['Jedes Kind muss die Hausaufgaben machen.', 'Jeder Mensch ist anders.', 'Jede Schule hat Regeln.']} />
           </Card>
 
-          {/* [cite: 272, 273, 274, 275] */}
           <Card title="Genitiv — Possession & Ownership" color="#f59e0b">
             <Intro>Equivalent to 's in English (Maria's book).</Intro>
             <DataTable headers={['Nominativ', 'Genitiv Article', 'Example']} rows={[
@@ -742,16 +720,13 @@ const GrammarPage = ({ darkMode = false }) => {
               ['die Frau (F)', 'der Frau', 'Die Tasche der Frau.'],
               ['die Kinder (Pl)', 'der Kinder', 'Die Bücher der Kinder.'],
             ]} />
-            {/* [cite: 276, 277] */}
             <p style={{ fontWeight: 700, fontSize: '0.85rem', margin: '1.25rem 0 0.5rem' }}>Noun Endings (Maskulin & Neutral only)</p>
             <DataTable headers={['Noun Type', 'Rule', 'Examples']} rows={[
               ['1 syllable', 'Add -es', 'Mann → Mannes, Hund → Hundes, Kind → Kindes'],
               ['2+ syllables', 'Add -s', 'Lehrer → Lehrers, Computer → Computers, Auto → Autos'],
               ['Ends in s/ß/x/z/tz/sch', 'Add -es', 'Bus → Busses, Platz → Platzes, Fuchs → Fuchses'],
             ]} />
-            {/* [cite: 278, 279, 280] */}
             <Tip>Proper names: <i>Peters Auto / Marias Buch</i> (add -s). Names ending in s/ß/x/z: <i>Thomas' Auto / Hans' Bruder</i> (apostrophe only).</Tip>
-            {/* [cite: 281, 282] */}
             <p style={{ fontWeight: 700, fontSize: '0.85rem', margin: '1.25rem 0 0.5rem' }}>Genitiv Prepositions</p>
             <DataTable headers={['Preposition', 'Meaning', 'Example']} rows={[
               ['wegen', 'because of', 'Wegen des Regens bleiben wir zu Hause.'],
@@ -767,7 +742,6 @@ const GrammarPage = ({ darkMode = false }) => {
     if (activeTab === 'Prepositions') {
       return (
         <div className="gr-fade">
-          {/* [cite: 285, 286, 287, 288, 289, 290, 291] */}
           <Card title="Zeitangaben — bis, ab, für" color="#3b82f6">
             <DataTable headers={['Preposition', 'English', 'Use', 'Question', 'Examples']} rows={[
               ['bis', 'until / by', 'Deadline / end point', 'Bis wann?', 'Bis zum 30. Juni / bis 18 Uhr'],
@@ -777,7 +751,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Tip><b>Memory trick:</b> bis → end point · ab → starting point · für → duration</Tip>
           </Card>
 
-          {/* [cite: 296, 297, 298, 301, 302] */}
           <Card title="seit vs. vor — 'since/for' vs. 'ago'" color="#f59e0b">
             <DataTable headers={['Preposition', 'English', 'Use', 'Tense', 'Example']} rows={[
               ['seit', 'since / for', 'Started in the past, STILL continuing', 'Present', 'Ich lerne seit zwei Jahren Deutsch.'],
@@ -786,7 +759,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Tip>seit → arrow reaches NOW (still ongoing). vor → happened and stopped (no arrow to now). <i>Wir wohnen seit 2020 hier.</i> vs <i>Er hat vor einer Woche angerufen.</i></Tip>
           </Card>
 
-          {/* [cite: 309, 310, 311, 312, 313, 317] */}
           <Card title="Wechselpräpositionen — Two-Way Prepositions" color="#8b5cf6">
             <Intro>These 9 take Akkusativ for movement (Wohin?) and Dativ for location (Wo?).</Intro>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))', gap: '0.6rem', marginBottom: '1.25rem' }}>
@@ -800,11 +772,9 @@ const GrammarPage = ({ darkMode = false }) => {
               ['an', 'Ich gehe an den Strand.', 'Ich bin am Strand. (an+dem=am)'],
               ['vor', 'Ich stelle das Auto vor das Haus.', 'Das Auto steht vor dem Haus.'],
             ]} minWidth="600px" />
-            {/* [cite: 318, 397] */}
             <Tip>Contractions: an+dem=am · in+dem=im · an+das=ans · in+das=ins. Motion verbs → Akk: gehen, fahren, legen, stellen, hängen, setzen, stecken. Position verbs → Dat: sein, liegen, stehen, hängen, sitzen, stecken.</Tip>
           </Card>
 
-          {/* [cite: 320, 321, 323, 324, 327] */}
           <Card title="Verben mit Präpositionen — Fixed Combinations" color="#14b8a6">
             <Intro>Learn these as complete units — the case is determined by the preposition, not the verb.</Intro>
             <DataTable headers={['Verb + Preposition', 'English', 'Case', 'Example']} rows={[
@@ -823,56 +793,52 @@ const GrammarPage = ({ darkMode = false }) => {
       );
     }
 
-    // Clauses
-    return (
-      <div className="gr-fade">
-        {/* [cite: 336, 337, 338, 339, 340, 341] */}
-        <Card title="Indirekte Fragen (Indirect Questions)" color="#6366f1">
-          <Intro>Polite ways to ask something. Rule: keep the question word, verb goes to the END (like weil, dass, obwohl).</Intro>
-          <DataTable headers={['Direct Question', 'Indirect Question']} rows={[
-            ['Wo wohnst du?', 'Kannst du mir sagen, wo du wohnst?'],
-            ['Wann kommt der Zug?', 'Weißt du, wann der Zug kommt?'],
-            ['Warum bist du traurig?', 'Kannst du mir sagen, warum du traurig bist?'],
-          ]} />
-          <Tip>Common starters: <i>Können Sie mir sagen, wo…? · Wissen Sie, wann…? · Weißt du, warum…?</i></Tip>
-        </Card>
+    if (activeTab === 'Clauses') {
+      return (
+        <div className="gr-fade">
+          <Card title="Indirekte Fragen (Indirect Questions)" color="#6366f1">
+            <Intro>Polite ways to ask something. Rule: keep the question word, verb goes to the END (like weil, dass, obwohl).</Intro>
+            <DataTable headers={['Direct Question', 'Indirect Question']} rows={[
+              ['Wo wohnst du?', 'Kannst du mir sagen, wo du wohnst?'],
+              ['Wann kommt der Zug?', 'Weißt du, wann der Zug kommt?'],
+              ['Warum bist du traurig?', 'Kannst du mir sagen, warum du traurig bist?'],
+            ]} />
+            <Tip>Common starters: <i>Können Sie mir sagen, wo…? · Wissen Sie, wann…? · Weißt du, warum…?</i></Tip>
+          </Card>
 
-        {/* [cite: 347, 348, 349, 350, 351, 356, 361, 366, 370, 371] */}
-        <Card title="Relativsätze (Relative Clauses)" color="#a855f7">
-          <Intro>Adds extra information about a noun, introduced by a Relativpronomen. Verb goes to the END.</Intro>
-          <DataTable headers={['Case', 'Maskulin', 'Feminin', 'Neutral', 'Plural']} rows={[
-            ['Nominativ', 'der', 'die', 'das', 'die'],
-            ['Akkusativ', 'den', 'die', 'das', 'die'],
-            ['Dativ', 'dem', 'der', 'dem', 'denen'],
-            ['Genitiv', 'dessen', 'deren', 'dessen', 'deren'],
-          ]} />
-          <Examples items={[
-            'Nominativ: Das ist der Mann, der Deutsch spricht.',
-            'Akkusativ: Das ist der Mann, den ich kenne.',
-            'Dativ: Das ist der Mann, dem ich helfe. (helfen + Dativ)',
-            'Genitiv: Das ist der Mann, dessen Auto neu ist. (whose car)',
-          ]} />
-          {/* [cite: 375, 376, 377, 378] */}
-          <p style={{ fontWeight: 700, fontSize: '0.85rem', margin: '1.25rem 0 0.5rem' }}>Relativsätze mit Präpositionen</p>
-          <DataTable headers={['Original', 'Relativsatz', 'Prep + Case']} rows={[
-            ['Ich spreche mit dem Mann.', 'Das ist der Mann, mit dem ich spreche.', 'mit + Dativ'],
-            ['Ich arbeite für die Firma.', 'Das ist die Firma, für die ich arbeite.', 'für + Akkusativ'],
-            ['Ich wohne in der Stadt.', 'Das ist die Stadt, in der ich wohne.', 'in + Dativ'],
-          ]} minWidth="600px" />
-          {/* [cite: 380] */}
-          <Tip><b>dessen vs. deren:</b> dessen = Maskulin & Neutral ('his/its'). deren = Feminin & Plural ('her/their'). Same forms as the Demonstrativpronomen table, different function.</Tip>
-        </Card>
-      </div>
-    );
+          <Card title="Relativsätze (Relative Clauses)" color="#a855f7">
+            <Intro>Adds extra information about a noun, introduced by a Relativpronomen. Verb goes to the END.</Intro>
+            <DataTable headers={['Case', 'Maskulin', 'Feminin', 'Neutral', 'Plural']} rows={[
+              ['Nominativ', 'der', 'die', 'das', 'die'],
+              ['Akkusativ', 'den', 'die', 'das', 'die'],
+              ['Dativ', 'dem', 'der', 'dem', 'denen'],
+              ['Genitiv', 'dessen', 'deren', 'dessen', 'deren'],
+            ]} />
+            <Examples items={[
+              'Nominativ: Das ist der Mann, der Deutsch spricht.',
+              'Akkusativ: Das ist der Mann, den ich kenne.',
+              'Dativ: Das ist der Mann, dem ich helfe. (helfen + Dativ)',
+              'Genitiv: Das ist der Mann, dessen Auto neu ist. (whose car)',
+            ]} />
+            <p style={{ fontWeight: 700, fontSize: '0.85rem', margin: '1.25rem 0 0.5rem' }}>Relativsätze mit Präpositionen</p>
+            <DataTable headers={['Original', 'Relativsatz', 'Prep + Case']} rows={[
+              ['Ich spreche mit dem Mann.', 'Das ist der Mann, mit dem ich spreche.', 'mit + Dativ'],
+              ['Ich arbeite für die Firma.', 'Das ist die Firma, für die ich arbeite.', 'für + Akkusativ'],
+              ['Ich wohne in der Stadt.', 'Das ist die Stadt, in der ich wohne.', 'in + Dativ'],
+            ]} minWidth="600px" />
+            <Tip><b>dessen vs. deren:</b> dessen = Maskulin & Neutral ('his/its'). deren = Feminin & Plural ('her/their'). Same forms as the Demonstrativpronomen table, different function.</Tip>
+          </Card>
+        </div>
+      );
+    }
   };
 
-  // ───────────────────────── B1 CONTENT ─────────────────────────
+  // ───────────────────────── B1.1 CONTENT ─────────────────────────
 
-  const renderB1 = () => {
+  const renderB1_1 = () => {
     if (activeTab === 'Connectors') {
       return (
         <div className="gr-fade">
-          {/* [cite: 405, 406, 407, 408] */}
           <Card title="Zweiteilige Konnektoren — Two-Part Connectors" color="#6366f1">
             <Intro>Both parts must appear — you cannot use just one half.</Intro>
             <DataTable headers={['Konnektor', 'Bedeutung']} rows={[
@@ -886,25 +852,21 @@ const GrammarPage = ({ darkMode = false }) => {
             ]} />
           </Card>
 
-          {/* [cite: 409, 410, 419, 420] */}
           <Card title="nicht nur … sondern auch / sowohl … als auch" color="#3b82f6">
             <SubBlock title="nicht nur … sondern auch" color="#3b82f6" structure="Subjekt + Verb + nicht nur + X, sondern auch + Y" examples={['Ich lerne nicht nur Deutsch, sondern auch Englisch.', 'Ich möchte nicht nur meinen Wortschatz verbessern, sondern auch fließender sprechen.']} />
             <SubBlock title="sowohl … als auch" color="#3b82f6" structure="Subjekt + Verb + sowohl + X + als auch + Y" examples={['Ich mag sowohl Kaffee als auch Tee.', 'Ich interessiere mich sowohl für Datenanalyse als auch für Business Analytics.']} />
           </Card>
 
-          {/* [cite: 429, 430, 438, 439] */}
           <Card title="entweder … oder / weder … noch" color="#22c55e">
             <SubBlock title="entweder … oder — exactly one of two choices" color="#22c55e" structure="Entweder + Hauptsatz 1, oder + Hauptsatz 2" examples={['Wir fahren entweder nach Berlin oder nach München.', 'Entweder rufst du an, oder du schreibst eine Nachricht.']} />
             <SubBlock title="weder … noch — rejects BOTH (no extra 'nicht')" color="#22c55e" structure="Weder + X + noch + Y" examples={['Ich trinke weder Kaffee noch Tee.', 'Er kann weder Deutsch noch Französisch sprechen.']} />
           </Card>
 
-          {/* [cite: 447, 448, 457, 458] */}
           <Card title="zwar … aber / einerseits … andererseits" color="#f59e0b">
             <SubBlock title="zwar … aber — concession then contrast" color="#f59e0b" structure="Zwar + Information 1, aber + Information 2" examples={['Das Auto ist zwar alt, aber es funktioniert gut.', 'Der B1-Kurs ist zwar schwierig, aber er ist sehr interessant.']} />
             <SubBlock title="einerseits … andererseits — two balanced perspectives" color="#f59e0b" structure="Einerseits + Satz 1, andererseits + Satz 2" examples={['Einerseits ist die Stadt groß, andererseits ist sie teuer.', 'Einerseits möchte ich in Deutschland studieren, andererseits mache ich mir Sorgen über die Kosten.']} />
           </Card>
 
-          {/* [cite: 466, 467, 476] */}
           <Card title="je … desto — Comparative Pairing" color="#ef4444">
             <div className="modal-formula">Je + Komparativ + Verb (Satz 1), desto + Komparativ + Verb (Satz 2)</div>
             <Examples items={['Je mehr ich lerne, desto besser werden meine Noten.', 'Je später es wird, desto müder bin ich.', 'Je mehr ich Deutsch lerne, desto selbstbewusster werde ich.']} />
@@ -917,7 +879,6 @@ const GrammarPage = ({ darkMode = false }) => {
     if (activeTab === 'Prepositions') {
       return (
         <div className="gr-fade">
-          {/* [cite: 479, 480, 481, 483, 490, 497, 630, 637, 644] */}
           <Card title="Genitiv-Präpositionen" color="#3b82f6">
             <Intro>In spoken German, Dativ is also acceptable, but Genitiv is standard in written/formal use.</Intro>
             <DataTable headers={['Präposition', 'Bedeutung']} rows={[
@@ -935,7 +896,6 @@ const GrammarPage = ({ darkMode = false }) => {
             <Tip>statt and anstatt are interchangeable as prepositions. All six always take Genitiv: wegen, während, statt, trotz, innerhalb, außerhalb.</Tip>
           </Card>
 
-          {/* [cite: 652, 653, 654, 655, 656, 664, 665, 666, 673] */}
           <Card title="Präpositionaladverbien — Wo-/Da-Komposita" color="#8b5cf6">
             <Intro>Used to ask about or refer back to THINGS (not people). Add -r- before vowel-starting prepositions.</Intro>
             <DataTable headers={['Präposition', 'Fragewort (wo-)', 'Antwort (da-)']} rows={[
@@ -957,7 +917,6 @@ const GrammarPage = ({ darkMode = false }) => {
     if (activeTab === 'Infinitiv & Futur') {
       return (
         <div className="gr-fade">
-          {/* [cite: 510, 511, 520, 521, 524, 526, 539, 541, 550, 552] */}
           <Card title="Infinitiv mit „zu“" color="#3b82f6">
             <Intro>When two verbs are linked and share the same subject, the second verb uses zu + Infinitiv. No own subject; always separated by a comma.</Intro>
             <p style={{ fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.5rem' }}>A. Verben + zu + Infinitiv</p>
@@ -968,11 +927,9 @@ const GrammarPage = ({ darkMode = false }) => {
             <p style={{ fontWeight: 700, fontSize: '0.85rem', margin: '1.25rem 0 0.5rem' }}>C. Adjektive + zu + Infinitiv</p>
             <div className="modal-formula" style={{ marginBottom: '0.75rem' }}>Es ist [Adjektiv], zu + Infinitiv</div>
             <Examples items={['Es ist gesund, viel Wasser zu trinken.', 'Es ist wichtig, Deutsch zu lernen.', 'Es ist schwer, neue Wörter zu merken.']} />
-            {/* [cite: 588] */}
             <Tip><b>Separable verbs:</b> zu goes between prefix and stem — <i>auf+zu+machen = aufzumachen</i>. Example: <i>Ich versuche, das Fenster aufzumachen.</i></Tip>
           </Card>
 
-          {/* [cite: 563, 564, 565, 574, 580] */}
           <Card title="Kein „zu“ — Three Fixed Exceptions" color="#ef4444">
             <Examples items={[
               'Nach Modalverben (können, müssen, dürfen, sollen, wollen, möchten): Ich kann Deutsch sprechen. NOT: Ich kann Deutsch zu sprechen.',
@@ -981,7 +938,6 @@ const GrammarPage = ({ darkMode = false }) => {
             ]} />
           </Card>
 
-          {/* [cite: 591, 592, 593, 594, 596, 607, 616] */}
           <Card title="Futur I (Future Tense) — werden" color="#22c55e">
             <Intro>werden has two completely different roles depending on what follows it.</Intro>
             <DataTable headers={['Person', 'werden']} rows={[['ich', 'werde'], ['du', 'wirst'], ['er / sie / es', 'wird'], ['wir', 'werden'], ['ihr', 'werdet'], ['sie / Sie', 'werden']]} />
@@ -993,14 +949,12 @@ const GrammarPage = ({ darkMode = false }) => {
             <Examples items={['Das Wetter wird besser.', 'Mein Deutsch wird besser.', 'Ich werde selbstbewusster.']} />
           </Card>
 
-          {/* [cite: 675, 676, 677, 678, 685, 686] */}
           <Card title="ohne zu / anstatt zu" color="#a855f7">
             <SubBlock title="ohne zu — 'without doing' (same subject)" color="#a855f7" structure="Hauptsatz + ohne + zu + Infinitiv" examples={['Er ging nach Hause, ohne sich zu verabschieden.', 'Sie schläft, ohne das Licht auszuschalten.']} />
             <SubBlock title="anstatt zu — 'instead of doing' (same subject)" color="#a855f7" structure="Hauptsatz + anstatt + zu + Infinitiv" examples={['Er spielt Fußball, anstatt zu lernen.', 'Sie isst Fast Food, anstatt zu kochen.']} />
             <Tip>If subjects differ → use ohne dass / anstatt dass + full clause instead. statt + Genitiv is a separate preposition pattern (<i>Statt des Kaffees trinke ich Tee</i>).</Tip>
           </Card>
 
-          {/* [cite: 694, 695, 696, 697, 698, 705, 706] */}
           <Card title="um … zu vs. damit — Purpose Clauses" color="#14b8a6">
             <DataTable headers={['Konstruktion', 'Wann?']} rows={[
               ['um … zu + Infinitiv', 'Both clauses have the SAME subject (shorter, preferred)'],
@@ -1016,7 +970,6 @@ const GrammarPage = ({ darkMode = false }) => {
     if (activeTab === 'Passiv & Verben') {
       return (
         <div className="gr-fade">
-          {/* [cite: 715, 716, 717, 718, 720, 722] */}
           <Card title="Verbformen — Principal Parts" color="#3b82f6">
             <DataTable headers={['Verb Type', 'Pattern']} rows={[
               ['Schwache Verben (weak)', 'Infinitiv → -te → ge-…-t'],
@@ -1035,11 +988,9 @@ const GrammarPage = ({ darkMode = false }) => {
             <DataTable headers={['Infinitiv', 'Präteritum', 'Partizip II']} rows={[
               ['bringen', 'brachte', 'gebracht'], ['denken', 'dachte', 'gedacht'], ['kennen', 'kannte', 'gekannt'], ['wissen', 'wusste', 'gewusst'],
             ]} />
-            {/* [cite: 724] */}
             <Tip>Partizip II with <b>haben</b>: transitive verbs (<i>Ich habe das Buch gelesen.</i>) Partizip II with <b>sein</b>: motion & change-of-state verbs (<i>Ich bin nach Berlin gefahren. / Er ist eingeschlafen.</i>)</Tip>
           </Card>
 
-          {/* [cite: 726, 727, 728, 729, 737, 738, 744, 745, 753] */}
           <Card title="Passiv (Passive Voice)" color="#ef4444">
             <Intro>Active focuses on the DOER; passive focuses on the ACTION or the thing being done.</Intro>
             <DataTable headers={['Zeitform', 'Bildung']} rows={[
@@ -1059,45 +1010,241 @@ const GrammarPage = ({ darkMode = false }) => {
       );
     }
 
-    // Relativsätze (B1)
-    return (
-      <div className="gr-fade">
-        {/* [cite: 755, 756, 757, 758, 759] */}
-        <Card title="Relativsätze — Full Case Table" color="#a855f7">
-          <Intro>Gender matches the noun described; case depends on the pronoun's role inside the relative clause. Verb always goes to the END.</Intro>
-          <DataTable headers={['Kasus', 'Maskulin', 'Feminin', 'Neutral', 'Plural']} rows={[
-            ['Nominativ', 'der', 'die', 'das', 'die'],
-            ['Akkusativ', 'den', 'die', 'das', 'die'],
-            ['Dativ', 'dem', 'der', 'dem', 'denen'],
-          ]} />
-          <Examples items={[
-            'Der Mann, der dort steht, ist mein Lehrer. (Masc., Nominativ)',
-            'Das Buch, das ich lese, ist interessant. (Neut., Akkusativ)',
-            'Der Mann, dem ich helfe, ist krank. (Masc., Dativ)',
-            'Die Kinder, denen ich erkläre, lernen schnell. (Plural, Dativ)',
-          ]} />
-        </Card>
+    if (activeTab === 'Relativsätze') {
+      return (
+        <div className="gr-fade">
+          <Card title="Relativsätze — Full Case Table" color="#a855f7">
+            <Intro>Gender matches the noun described; case depends on the pronoun's role inside the relative clause. Verb always goes to the END.</Intro>
+            <DataTable headers={['Kasus', 'Maskulin', 'Feminin', 'Neutral', 'Plural']} rows={[
+              ['Nominativ', 'der', 'die', 'das', 'die'],
+              ['Akkusativ', 'den', 'die', 'das', 'die'],
+              ['Dativ', 'dem', 'der', 'dem', 'denen'],
+            ]} />
+            <Examples items={[
+              'Der Mann, der dort steht, ist mein Lehrer. (Masc., Nominativ)',
+              'Das Buch, das ich lese, ist interessant. (Neut., Akkusativ)',
+              'Der Mann, dem ich helfe, ist krank. (Masc., Dativ)',
+              'Die Kinder, denen ich erkläre, lernen schnell. (Plural, Dativ)',
+            ]} />
+          </Card>
 
-        {/* [cite: 766, 767, 768] */}
-        <Card title="Relativsatz mit „was“" color="#14b8a6">
-          <Intro>Use was (not das/welches) after indefinite pronouns and neuter superlatives.</Intro>
-          <DataTable headers={['Verwendet nach…', 'Beispiel']} rows={[
-            ['alles', 'Alles, was er sagt, ist richtig.'],
-            ['nichts', 'Es gibt nichts, was ich tun kann.'],
-            ['etwas', 'Das ist etwas, was ich nicht verstehe.'],
-            ['vieles', 'Vieles, was wir lernen, ist nützlich.'],
-            ['das Beste (superlative)', 'Das ist das Beste, was ich je gegessen habe.'],
-          ]} />
-          <Tip>✗ NOT: <i>alles, das er sagt</i> — must be <b>was</b> after alles/nichts/etwas/vieles/neuter superlatives.</Tip>
-        </Card>
-      </div>
-    );
+          <Card title="Relativsatz mit „was“" color="#14b8a6">
+            <Intro>Use was (not das/welches) after indefinite pronouns and neuter superlatives.</Intro>
+            <DataTable headers={['Verwendet nach…', 'Beispiel']} rows={[
+              ['alles', 'Alles, was er sagt, ist richtig.'],
+              ['nichts', 'Es gibt nichts, was ich tun kann.'],
+              ['etwas', 'Das ist etwas, was ich nicht verstehe.'],
+              ['vieles', 'Vieles, was wir lernen, ist nützlich.'],
+              ['das Beste (superlative)', 'Das ist das Beste, was ich je gegessen habe.'],
+            ]} />
+            <Tip>✗ NOT: <i>alles, das er sagt</i> — must be <b>was</b> after alles/nichts/etwas/vieles/neuter superlatives.</Tip>
+          </Card>
+        </div>
+      );
+    }
+  };
+
+  // ───────────────────────── B1.2 CONTENT ─────────────────────────
+
+  const renderB1_2 = () => {
+    if (activeTab === 'Temporale Sätze') {
+      return (
+        <div className="gr-fade">
+          <Card title="als vs. wenn" color="#3b82f6">
+            <DataTable headers={['Konnektor', 'Bedeutung', 'Beispiel']} rows={[
+              ['als', 'One-time event in the past (Vergangenheit only)', 'Als ich nach Deutschland kam, war ich 24.'],
+              ['wenn', 'Present, Future, Repeated past, Conditional (if)', 'Wenn ich Zeit habe, rufe ich dich an.']
+            ]} />
+          </Card>
+          <Card title="bevor vs. nachdem" color="#f59e0b">
+             <Intro>Shortcut: <b>nachdem</b> = 1. Handlung (First action), <b>bevor</b> = 2. Handlung (Second action)</Intro>
+             <SubBlock title="bevor (before)" color="#f59e0b" structure="Main Clause + bevor + Subject + Verb (End)" examples={[
+                'Bevor ich mich gewaschen habe, habe ich meine Zähne geputzt.'
+             ]} />
+             <SubBlock title="nachdem (after)" color="#f59e0b" structure="Nachdem + Subject + Plusquamperfekt, Main Clause (Präteritum)" examples={[
+                'Nachdem ich meine Zähne geputzt hatte, wusch ich mich.'
+             ]} />
+          </Card>
+          <Card title="während & seitdem" color="#14b8a6">
+             <SubBlock title="während (while)" color="#14b8a6" structure="Two actions at the same time." examples={[
+                'Während ich lernte, hörte mein Bruder Musik.'
+             ]} />
+             <SubBlock title="seitdem (since)" color="#14b8a6" structure="Started in the past and continues until now." examples={[
+                'Seitdem ich Deutsch lerne, spreche ich besser.'
+             ]} />
+          </Card>
+        </div>
+      );
+    }
+
+    if (activeTab === 'Konjunktiv II') {
+      return (
+        <div className="gr-fade">
+          <Card title="Indikativ vs Konjunktiv II" color="#ef4444">
+            <DataTable headers={['Form', 'Bedeutung', 'Beispiel']} rows={[
+              ['Indikativ', 'Reality / Facts', 'Ich habe Zeit.'],
+              ['Konjunktiv II', 'Wish / Polite request / Advice / Imaginary', 'Ich hätte Zeit.']
+            ]} />
+          </Card>
+
+          <Card title="Konjunktiv II (Präsens)" color="#a855f7">
+             <DataTable headers={['Verb', 'Konjunktiv II']} rows={[
+                ['haben', 'hätte'],
+                ['sein', 'wäre'],
+                ['werden', 'würde'],
+                ['können', 'könnte'],
+                ['müssen', 'müsste'],
+                ['wissen', 'wüsste'],
+             ]} />
+             <p style={{ fontWeight: 700, fontSize: '0.85rem', margin: '1.25rem 0 0.5rem' }}>Anwendung (Usage)</p>
+             <Examples items={[
+                'Wunsch (Wish): Ich hätte gern einen Kaffee. / Ich wäre gern Lehrer.',
+                'Höfliche Bitte (Request): Könnten Sie mir helfen? / Würden Sie mir bitte helfen?',
+                'Ratschlag (Advice): Du könntest mehr Sport machen.'
+             ]} />
+          </Card>
+
+          <Card title="Konjunktiv II (Vergangenheit) & Irreale Bedingungssätze" color="#22c55e">
+             <SubBlock title="Vergangenheit (Past)" color="#22c55e" structure="hätte + Partizip II / wäre + Partizip II" examples={[
+                'Ich hätte mehr gelernt.',
+                'Wäre ich früher gekommen.'
+             ]} />
+             <SubBlock title="Irreale Bedingungssätze (Imaginary If-Sentences)" color="#22c55e" structure="Wenn + Konjunktiv II, Konjunktiv II" examples={[
+                'Wenn ich mehr Geld hätte, könnte ich ein Auto kaufen.',
+                'Wenn ich Zeit hätte, würde ich mehr Deutsch lernen.'
+             ]} />
+          </Card>
+        </div>
+      );
+    }
+
+    if (activeTab === 'Pronomen & Fragen') {
+      return (
+        <div className="gr-fade">
+          <Card title="Direkte und Indirekte Fragen" color="#6366f1">
+             <DataTable headers={['Direct Question', 'Indirect Question']} rows={[
+               ['Wo wohnst du? (W-Frage)', 'Kannst du mir sagen, wo du wohnst?'],
+               ['Kommst du? (Ja/Nein-Frage)', 'Kannst du mir sagen, ob du kommst?']
+             ]} />
+             <Tip>W-Fragen use the same W-word. Ja/Nein-Fragen use <b>ob</b>. The verb goes to the end!</Tip>
+          </Card>
+
+          <Card title="Präpositionaladverbien" color="#f59e0b">
+             <DataTable headers={['Frage (Wo + Präposition)', 'Antwort (Da + Präposition)']} rows={[
+                ['Wofür', 'Dafür'],
+                ['Womit', 'Damit'],
+                ['Worauf', 'Darauf'],
+                ['Worüber', 'Darüber'],
+                ['Woraus', 'Daraus'],
+                ['Wovon', 'Davon'],
+                ['Woran', 'Daran'],
+                ['Worum', 'Darum'],
+             ]} />
+             <Tip><b>Rule:</b> Add <b>r</b> if the preposition starts with a vowel (e.g. worauf).</Tip>
+          </Card>
+
+          <Card title="Indefinitpronomen" color="#eab308">
+             <PillGrid color="#eab308" items={[
+               ['irgendwo', 'somewhere'], 
+               ['irgendwann', 'sometime'], 
+               ['irgendwer', 'someone'], 
+               ['irgendwas', 'something'], 
+               ['irgendwie', 'somehow'], 
+               ['irgendwelche', 'some / any']
+             ]} />
+             <p style={{ fontWeight: 700, fontSize: '0.85rem', margin: '1.25rem 0 0.5rem' }}>jemand vs. niemand</p>
+             <DataTable headers={['Case', 'jemand (someone)', 'niemand (nobody)']} rows={[
+               ['Nominativ', 'jemand', 'niemand'],
+               ['Akkusativ', 'jemanden', 'niemanden'],
+               ['Dativ', 'jemandem', 'niemandem'],
+             ]} />
+          </Card>
+        </div>
+      );
+    }
+
+    if (activeTab === 'Satzstrukturen') {
+      return (
+        <div className="gr-fade">
+          <Card title="indem (by doing something)" color="#3b82f6">
+             <div className="modal-formula" style={{ marginBottom: '1.25rem' }}>
+               Main Clause + indem + Subject + ... + Verb (End)
+             </div>
+             <Examples items={[
+               'Ich verbessere mein Deutsch, indem ich jeden Tag übe.',
+               'Wir schützen die Umwelt, indem wir Energie sparen.'
+             ]} />
+          </Card>
+
+          <Card title="Je ... desto / umso (The more..., the more...)" color="#ef4444">
+             <div className="modal-formula" style={{ marginBottom: '1.25rem' }}>
+               Je + Comparative ... Verb (End), desto + Comparative + Verb (Pos 2)
+             </div>
+             <Examples items={[
+               'Je schneller du fährst, desto größer ist das Unfallrisiko.',
+               'Je mehr du lernst, desto besser sprichst du Deutsch.'
+             ]} />
+          </Card>
+
+          <Card title="Plusquamperfekt" color="#a855f7">
+             <Intro>Used when one past action happened before another past action.</Intro>
+             <div className="modal-formula" style={{ marginBottom: '1.25rem' }}>
+               hatte + Partizip II / war + Partizip II
+             </div>
+             <Examples items={[
+               'Ich hatte gegessen, bevor ich ins Kino ging.',
+               'Der Unfall war schon passiert, als ich ankam.'
+             ]} />
+          </Card>
+
+          <Card title="Partizip II als Adjektiv" color="#14b8a6">
+             <Intro>Partizip II can be used like an adjective and follows adjective endings.</Intro>
+             <Examples items={[
+               'das gestohlene Auto',
+               'der gestohlene Computer',
+               'die verlorene Tasche',
+               'der geschlossene Supermarkt'
+             ]} />
+          </Card>
+        </div>
+      );
+    }
+
+    if (activeTab === 'Verben') {
+      return (
+        <div className="gr-fade">
+          <Card title="Lassen (to have/get something done)" color="#f59e0b">
+             <Intro>Acts like a modal verb.</Intro>
+             <div className="modal-formula" style={{ marginBottom: '1.25rem' }}>
+               Subject + lassen + Object + Infinitive
+             </div>
+             <Examples items={[
+               'Ich lasse mein Handy reparieren.',
+               'Ich muss mein Handy reparieren lassen.'
+             ]} />
+          </Card>
+
+          <Card title="brauchen + zu + Infinitiv" color="#22c55e">
+             <SubBlock title="brauchen nicht zu (don't need to)" color="#22c55e" examples={[
+               'Ich brauche heute nicht zu arbeiten. (instead of: Ich muss nicht arbeiten)'
+             ]} />
+             <SubBlock title="brauchen nur zu (only need to)" color="#22c55e" examples={[
+               'Du brauchst nur zu lernen.'
+             ]} />
+             <SubBlock title="brauchen kein + zu" color="#22c55e" examples={[
+               'Ich brauche keinen Brief zu schreiben.'
+             ]} />
+          </Card>
+        </div>
+      );
+    }
   };
 
   const renderContent = () => {
     if (level === 'A1') return renderA1();
     if (level === 'A2') return renderA2();
-    return renderB1();
+    if (level === 'B1.1') return renderB1_1();
+    if (level === 'B1.2') return renderB1_2();
   };
 
   return (
@@ -1155,10 +1302,10 @@ const GrammarPage = ({ darkMode = false }) => {
           text-transform: uppercase; opacity: 0.4; font-style: italic;
         }
 
-        /* Level pills (A1 / A2 / B1) */
-        .gr-level-row { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; max-width: 340px; }
+        /* Level pills (A1 / A2 / B1.1 / B1.2) */
+        .gr-level-row { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; max-width: 400px; flex-wrap: wrap; }
         .gr-level-btn {
-          flex: 1; padding: 0.55rem 0.5rem; border-radius: 10px;
+          flex: 1; padding: 0.55rem 0.5rem; border-radius: 10px; min-width: 60px;
           font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700;
           letter-spacing: 0.04em; border: 1.5px solid transparent; cursor: pointer;
           transition: all 0.2s ease; text-align: center;
@@ -1344,7 +1491,7 @@ const GrammarPage = ({ darkMode = false }) => {
             <h1 className="gr-title">Grammar Hub</h1>
           </div>
 
-          {/* Level Row (A1 / A2 / B1) */}
+          {/* Level Row (A1 / A2 / B1.1 / B1.2) */}
           <div className="gr-level-row">
             {LEVELS.map(lvl => (
               <button key={lvl} onClick={() => changeLevel(lvl)} className={`gr-level-btn ${level === lvl ? 'active' : ''}`}>
@@ -1395,21 +1542,13 @@ const GrammarPage = ({ darkMode = false }) => {
               <h2 className="patterns-title">💡 A2 Exam Master Patterns</h2>
               <div className="patterns-grid">
                 {[
-                  /* [cite: 94, 95] */
                   { label: 'WDOWD Group', color: '#6366f1', text: 'Weil, Dass, Obwohl, Wenn, Damit — all five send the verb to the end of the clause.' },
-                  /* [cite: 102] */
                   { label: 'denn = Normal', color: '#3b82f6', text: 'denn is the only connector that keeps normal word order — everything else in WDOWD sends verb to end.' },
-                  /* [cite: 103, 384] */
                   { label: 'um...zu vs damit', color: '#a855f7', text: 'Same subject → um...zu + Infinitiv. Different subjects → damit + conjugated verb.' },
-                  /* [cite: 239, 240, 241, 388] */
                   { label: 'Dativ Trap', color: '#f59e0b', text: 'helfen, antworten, zuhören, gehören, danken all take Dativ, never Akkusativ.' },
-                  /* [cite: 314, 315, 397] */
                   { label: 'Wechsel Rule', color: '#8b5cf6', text: 'Wohin? = Akkusativ (movement). Wo? = Dativ (location). Same 9 prepositions, different case.' },
-                  /* [cite: 254] */
                   { label: 'Adjektiv Endings', color: '#22c55e', text: 'Only the adjective ending changes with case — the noun itself never changes.' },
-                  /* [cite: 282] */
                   { label: 'Genitiv Preps', color: '#14b8a6', text: 'wegen, trotz, während, statt all take Genitiv: des Mannes, der Frau.' },
-                  /* [cite: 374, 386] */
                   { label: 'Relativsatz', color: '#ef4444', text: 'Gender from the noun, case from the pronoun\'s role inside the relative clause.' },
                 ].map(p => (
                   <div key={p.label} className="pattern-card">
@@ -1421,27 +1560,19 @@ const GrammarPage = ({ darkMode = false }) => {
             </div>
           )}
 
-          {level === 'B1' && (
+          {level === 'B1.1' && (
             <div className={`patterns-section ${dm ? 'dark' : 'light'}`}>
               <div className="patterns-glow" />
-              <h2 className="patterns-title">💡 B1 Exam Master Patterns</h2>
+              <h2 className="patterns-title">💡 B1.1 Exam Master Patterns</h2>
               <div className="patterns-grid">
                 {[
-                  /* [cite: 439, 476, 779] */
                   { label: 'Zweiteilige Konnektoren', color: '#6366f1', text: 'weder…noch rejects both with no extra nicht. je…desto always pairs two comparatives.' },
-                  /* [cite: 481, 780] */
                   { label: 'Genitiv-Präpositionen', color: '#3b82f6', text: 'wegen, während, statt, trotz, innerhalb, außerhalb — all six always take Genitiv.' },
-                  /* [cite: 593, 781] */
                   { label: 'Futur I', color: '#22c55e', text: 'werden + Infinitiv → future. werden + Nomen/Adjektiv → to become. Infinitiv always at the end.' },
-                  /* [cite: 565, 574, 580, 783] */
                   { label: 'Kein zu', color: '#ef4444', text: 'Never use zu after modal verbs, after werden (Futur I), or after hören/sehen/lassen/gehen/kommen.' },
-                  /* [cite: 696, 784] */
                   { label: 'um...zu vs damit', color: '#a855f7', text: 'Same subject → um...zu + Infinitiv. Different subjects → damit + Nebensatz.' },
-                  /* [cite: 752, 787] */
                   { label: 'Passiv Formula', color: '#f59e0b', text: 'Präsens: wird + Partizip II. Präteritum: wurde + Partizip II. +Modal: Modalverb + Partizip II + werden.' },
-                  /* [cite: 673, 785] */
                   { label: 'wo-/da-Komposita', color: '#8b5cf6', text: 'Add -r- before vowel-starting prepositions: woran, worauf, worum — only for things, not people.' },
-                  /* [cite: 768, 775, 788] */
                   { label: 'was-Relativsatz', color: '#14b8a6', text: "Use was (not das) after alles, nichts, etwas, vieles, and neuter superlatives." },
                 ].map(p => (
                   <div key={p.label} className="pattern-card">
